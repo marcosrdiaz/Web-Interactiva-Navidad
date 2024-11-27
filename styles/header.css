@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #73BA9B;
+    height: 15vh; /* 15% del alto de la pantalla */
+    max-width: 600px; /* Tamaño móvil */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    padding: 0 10px; 
+}
+.icon {
+    height: 50px; /* Tamaño ajustado del ícono de Papá Noel */
+    width: auto;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.button {
+    background-color: #d32f2f; /* Rojo navideño */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
