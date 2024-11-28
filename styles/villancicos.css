@@ -1,0 +1,46 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.villancicos {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #c8e6c9, #ffccbc);
+    color: #2c3e50;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.player {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+li:hover {
+    background-color: #f0f0f0;
+}
+
+audio {
+    margin-top: 20px;
+    width: 100%;
+}
