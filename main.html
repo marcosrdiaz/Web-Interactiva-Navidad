@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
     <script src="/static/home.js" async></script>
     <script src="/static/villancicos.js" async></script>
+    <script src="/static/juegos.js" async></script>
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/home.css">
@@ -83,24 +84,24 @@
         <section id="Galeria">
             <p>Galeria</p>
         </section>
-        <section class="Villancicos">
+        <section id="Villancicos">
             <h1>Reproductor de Villancicos</h1>
             <div class="player">
                 <ul id="playlist">
-                    <li data-src="/styles/audios/Blanca Navidad (White Christmas).mp3">🎵 Blanca Navidad</li>
-                    <li data-src="/styles/audios/El Burrito Sabanero.mp3">🎵 El Burrito Sabanero</li>
-                    <li data-src="/styles/audios/Jingle Bell Rock.mp3">🎵 Jingle Bell</li>
-                    <li data-src="/styles/audios/Llegó la Navidad.mp3">🎵 Llegó la Navvidad</li>
-                    <li data-src="/styles/audios/Los Peces En El Río.mp3">🎵 Los Peces en el río</li>
-                    <li data-src="/styles/audios/Navidad Junto A Ti.mp3">🎵 Navidad Junto A Ti</li>
-                    <li data-src="/styles/audios/Santa La Noche.mp3">🎵 Santa La Noche</li>
-                    <li data-src="/styles/audios/Siempre Te Recordaré (Always On My Mind).mp3">🎵 Siempre Te Recordaré </li>
-                    <li data-src="/styles/audios/Te Deseo Muy Felices Fiestas (Have Yourself A Merry Little Christmas).mp3">🎵 Te Deseo Muy Felices Fiestas </li>
-                    <li data-src="/styles/audios/The Christmas Song (Merry Christmas To You).mp3">🎵 The Christmas Song </li>
-                    <li data-src="/styles/audios/Todo Es Posible En Navidad - Copy.mp3">🎵 Todo Es Posible en Navidad </li>
+                    <li data-src="/styles/audios/Blanca_Navidad.mp3">🎵 Blanca Navidad</li>
+                    <li data-src="/styles/audios/El_Burrito_Sabanero.mp3">🎵 El Burrito Sabanero</li>
+                    <li data-src="/styles/audios/Jingle_Bell_Rock.mp3">🎵 Jingle Bell</li>
+                    <li data-src="/styles/audios/Llegó_la_Navidad.mp3">🎵 Llegó la Navvidad</li>
+                    <li data-src="/styles/audios/Los_Peces_En_El_Río.mp3">🎵 Los Peces en el río</li>
+                    <li data-src="/styles/audios/Navidad_Junto_A_Ti.mp3">🎵 Navidad Junto A Ti</li>
+                    <li data-src="/styles/audios/Santa_La_Noche.mp3">🎵 Santa La Noche</li>
+                    <li data-src="/styles/audios/Siempre_Te_Recordaré.mp3">🎵 Siempre Te Recordaré </li>
+                    <li data-src="/styles/audios/Te_Deseo_Muy_Felices_Fiestas.mp3">🎵 Te Deseo Muy Felices Fiestas </li>
+                    <li data-src="/styles/audios/The_Christmas_Song.mp3">🎵 The Christmas Song </li>
+                    <li data-src="/styles/audios/Todo_Es_Posible_En_Navidad.mp3">🎵 Todo Es Posible en Navidad </li>
                 </ul>
                 <audio id="audio" controls>
-                    <source id="audioSource" type="audio/mpeg">
+                
                 </audio>
             </div>
         </section>
@@ -108,20 +109,29 @@
             <p>Juegos</p>
             <div class="game-container">
                 <div class="game" data-game="juego1">
-                    
                     <h2>Detén al Virgen</h2>
                     <p>¡Acaba con el enemigo de la Navidad!</p>
                     <img src="/styles/images/grinch.jpg" alt="Juego 1">
+                    <button class="play-btn" data-target="#juego1">Jugar</button>
                 </div>
                 <div class="game" data-game="juego2">
-                    
                     <h2>Carrera de trineos</h2>
                     <p>¡Llega el primero a la meta!</p>
                     <img src="/styles/images/trineo.png" alt="Juego 2">
+                    <button class="play-btn" data-target="#juego2">Jugar</button>
+                </div>
+            </div>
+            
+            <!-- Contenedor del juego oculto -->
+            <div id="juego1" class="juego-oculto">
+                <button class="close-btn">Cerrar</button>
+                <h2>Detén al Virgen - Juego</h2>
+                <div class="game-container">
+                    <h1>Puntos: <span id="score">0</span></h1>
+                    <img src="target.png" alt="Objetivo" id="target">
                 </div>
             </div>
         </section>
-        
     </main>
 </body>
 </html>

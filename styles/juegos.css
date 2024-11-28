@@ -46,3 +46,59 @@
     margin: 0 10px;
     max-width: 100%;
 }
+
+h1 {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 1.5rem;
+}
+
+#target {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+/* Juego oculto por defecto */
+.juego-oculto {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botón */
+.play-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    z-index: 1001; /* Asegúrate de que esté por encima del contenido del juego */
+}
