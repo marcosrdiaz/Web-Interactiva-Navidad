@@ -1,7 +1,7 @@
 function abrirJuego1() {
     cerrarTodosLosJuegos();
     const juego1 = document.getElementById('juego1');
-    juego1.style.display = 'flex';
+    juego1.style.display = 'block';
     moverObjetivo(); // Mueve el objetivo al iniciar el juego
 }
 
@@ -14,6 +14,7 @@ function abrirJuego2() {
 function cerrarJuego1() {
     const juego1 = document.getElementById('juego1');
     juego1.style.display = 'none';
+    score = 0;
 }
 
 function cerrarJuego2() {
@@ -32,8 +33,10 @@ const target = document.getElementById('target');
 const scoreDisplay = document.getElementById('score');
 let score = 0;
 
+
 function moverObjetivo() {
-    const gameContainer = document.querySelector('#juego1 .game-container');
+    scoreDisplay.textContent = score;
+    const gameContainer = document.querySelector('#juego1');
     const maxWidth = gameContainer.clientWidth;
     const maxHeight = gameContainer.clientHeight;
 
@@ -44,7 +47,6 @@ function moverObjetivo() {
 
 target.addEventListener('click', () => {
     score += 5;
-    scoreDisplay.textContent = score;
     moverObjetivo();
 });
 

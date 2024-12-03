@@ -45,21 +45,29 @@
     font-size: 1rem;
     margin: 0 10px;
     max-width: 100%;
+    padding: 2%;
 }
 
 h1 {
     position: absolute;
-    top: 10px;
-    left: 20px;
+    top: 50%;
+    right: 0;
     font-size: 1.5rem;
+    color: black;
+    transform: rotate(90deg);
+    
 }
 
+/* Juego 1 */
+
+
 #target {
+    transform: rotate(90deg);
     position: absolute;
     width: 80px;
     height: 80px;
-    cursor: pointer;
     transition: transform 0.1s ease;
+    
 }
 
 /* Juego oculto por defecto */
@@ -71,13 +79,13 @@ h1 {
     width: 100%;
     max-width: 600px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
     color: white;
     z-index: 1000;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     margin: 0 auto;
+    cursor: url("/styles/images/cursor.png"), not-allowed;
 }
 
 .juego-visible {
@@ -119,7 +127,7 @@ h1 {
     background-color: #f0f0f0;
 }
 
-#sled1, #sled2, #sled3 {
+#playerSled, #sled2, #sled3 {
     width: 100px;
     height: auto;
 }
