@@ -12,6 +12,9 @@ function abrirJuego2() {
     document.getElementById('startScreen').style.display = 'block';
     document.getElementById('countdown').style.display = 'none';
     document.getElementById('raceCanvas').style.display = 'none';
+    document.getElementById('playerSled').style.display = 'none';
+    document.getElementById('sled2').style.display = 'none';
+    document.getElementById('sled3').style.display = 'none';
 }
 
 function cerrarJuego1() {
@@ -54,72 +57,88 @@ target.addEventListener('click', () => {
 });
 
 // Lógica del juego 2 (Carrera de trineos)
-const canvas = document.getElementById('raceCanvas');
-const ctx = canvas.getContext('2d');
+// Referencias a elementos importantes
+// Referencias a elementos importantes
+const startScreen = document.getElementById('startScreen');
+const countdown = document.getElementById('countdown');
+const playerSled = document.getElementById('playerSled');
+const sled2 = document.getElementById('sled2');
+const sled3 = document.getElementById('sled3');
+const raceCanvas = document.getElementById('raceCanvas');
+const startButton = document.getElementById('startRaceButton');
 
-const sleds = [
-    { x: 0, element: document.getElementById('sled1') },
-    { x: 0, element: document.getElementById('sled2') },
-    { x: 0, element: document.getElementById('sled3') }
-];
+// Posiciones iniciales
+function resetPositions() {
+    playerSled.style.top = '0px';
+    playerSled.style.left = '10px';
 
-const raceDistance = canvas.width - 100;
-let raceInterval;
+    sled2.style.top = '0px';
+    sled2.style.left = '155px';
+
+    sled3.style.top = '0px';
+    sled3.style.left = '300px';
+}
+
+// Iniciar carrera
+startButton.addEventListener('click', startRace);
 
 function startRace() {
-    const sledNumber = parseInt(document.getElementById('sledNumber').value);
-    if (isNaN(sledNumber) || sledNumber < 1 || sledNumber > 3) {
-        alert('Por favor, ingresa un número de trineo válido (1-3)');
-        return;
-    }
+    resetPositions(); // Restablece las posiciones iniciales
+    startScreen.style.display = 'none'; // Oculta la pantalla de inicio
+    countdown.style.display = 'block'; // Muestra el contador
+    let counter = 3;
 
-    sleds.forEach(sled => sled.x = 0);
-    updateSledPositions();
+    const timer = setInterval(() => {
+        countdown.textContent = counter;
+        counter--;
 
-    raceInterval = setInterval(() => {
-        sleds.forEach((sled, index) => {
-            if (index !== 0) { // Los trineos controlados por la IA se mueven automáticamente
-                sled.x += Math.random() * 10;
-            }
-        });
+        if (counter < 0) {
+            clearInterval(timer);
+            countdown.style.display = 'none';
+            raceCanvas.style.display = 'block';
+            playerSled.style.display = 'block';
+            sled2.style.display = 'block';
+            sled3.style.display = 'block';
+            startGame();
+        }
+    }, 1000);
+}
 
-        updateSledPositions();
+function startGame() {
+    let playerPositionY = 0;
+    let sled2PositionY = 0;
+    let sled3PositionY = 0;
 
-        const winner = sleds.findIndex(sled => sled.x >= raceDistance);
-        if (winner !== -1) {
-            clearInterval(raceInterval);
-            alert(`¡Trineo ${winner + 1} ha ganado!`);
+    // Movimiento del jugador (click para avanzar)
+    window.addEventListener('click', () => {
+        playerPositionY += 10; // Incrementa la posición del jugador hacia abajo
+        playerSled.style.top = `${playerPositionY}px`;
+    });
+
+    // Movimiento automático de los trineos 2 y 3
+    const interval = setInterval(() => {
+        sled2PositionY += Math.random() * 5 + 1; // Movimiento aleatorio hacia abajo
+        sled3PositionY += Math.random() * 5 + 1;
+
+        sled2.style.top = `${sled2PositionY}px`;
+        sled3.style.top = `${sled3PositionY}px`;
+
+        // Condición de finalización (llegada a la meta en la parte inferior del canvas)
+        if (playerPositionY >= 600 || sled2PositionY >= 600 || sled3PositionY >= 600) {
+            clearInterval(interval);
+            declareWinner(playerPositionY, sled2PositionY, sled3PositionY);
         }
     }, 100);
 }
 
-function updateSledPositions() {
-    sleds.forEach(sled => {
-        sled.element.style.left = `${sled.x}px`;
-    });
-}
-
-function handleKeyPress(event) {
-    if (event.code === 'Space') {
-        sleds[0].x += 10; // Mueve el trineo del jugador
-        updateSledPositions();
+function declareWinner(playerPos, sled2Pos, sled3Pos) {
+    let winner = 'Jugador';
+    if (sled2Pos >= 600 && sled2Pos > playerPos && sled2Pos > sled3Pos) {
+        winner = 'Trineo 2';
+    } else if (sled3Pos >= 600 && sled3Pos > playerPos && sled3Pos > sled2Pos) {
+        winner = 'Trineo 3';
     }
+
+    alert(`¡${winner} ha ganado la carrera!`);
 }
 
-document.getElementById('startRaceButton').addEventListener('click', () => {
-    document.getElementById('startScreen').style.display = 'none';
-    document.getElementById('countdown').style.display = 'block';
-    let countdown = 3;
-    const countdownInterval = setInterval(() => {
-        document.getElementById('countdown').textContent = countdown;
-        countdown--;
-        if (countdown < 0) {
-            clearInterval(countdownInterval);
-            document.getElementById('countdown').style.display = 'none';
-            document.getElementById('raceCanvas').style.display = 'block';
-            startRace();
-        }
-    }, 1000);
-});
-
-document.addEventListener('keydown', handleKeyPress);

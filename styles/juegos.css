@@ -120,12 +120,8 @@
     transform: rotate(90deg);
 }
 
-#raceCanvas {
-    border: 1px solid black;
-    background-color: #f0f0f0;
-}
-
 #playerSled, #sled2, #sled3 {
+    position: absolute;
     width: 100px;
     height: auto;
 }
@@ -139,13 +135,21 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-image: url("/styles/images/nieve.png");
+    background-image: url("/styles/images/nieve-horizontal.png");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
-    
-    
-    
+}
+
+#startScreen p {
+    font-size: 1.5rem;
+    color: black;
+    position: fixed;
+    transform: rotate(90deg);
+    background-color: white;
+    padding: 100px;
+    top:33%;
+    text-align: center;   
 }
 
 #startRaceButton {
@@ -166,4 +170,36 @@
 
 #startRaceButton:hover {
     background-color: #0056b3; /* Cambio de color al pasar el mouse */
+}
+
+#countdown {
+    font-size: 3rem;
+    color: black;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("/styles/images/nieve-horizontal.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+#raceCanvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("/styles/images/nieve-horizontal.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
