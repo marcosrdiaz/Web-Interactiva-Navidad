@@ -9,6 +9,9 @@ function abrirJuego2() {
     cerrarTodosLosJuegos();
     const juego2 = document.getElementById('juego2');
     juego2.style.display = 'flex';
+    document.getElementById('startScreen').style.display = 'block';
+    document.getElementById('countdown').style.display = 'none';
+    document.getElementById('raceCanvas').style.display = 'none';
 }
 
 function cerrarJuego1() {
@@ -61,6 +64,7 @@ const sleds = [
 ];
 
 const raceDistance = canvas.width - 100;
+let raceInterval;
 
 function startRace() {
     const sledNumber = parseInt(document.getElementById('sledNumber').value);
@@ -72,9 +76,11 @@ function startRace() {
     sleds.forEach(sled => sled.x = 0);
     updateSledPositions();
 
-    const raceInterval = setInterval(() => {
-        sleds.forEach(sled => {
-            sled.x += Math.random() * 10;
+    raceInterval = setInterval(() => {
+        sleds.forEach((sled, index) => {
+            if (index !== 0) { // Los trineos controlados por la IA se mueven automáticamente
+                sled.x += Math.random() * 10;
+            }
         });
 
         updateSledPositions();
@@ -93,4 +99,27 @@ function updateSledPositions() {
     });
 }
 
-document.getElementById('startRace').addEventListener('click', startRace);
+function handleKeyPress(event) {
+    if (event.code === 'Space') {
+        sleds[0].x += 10; // Mueve el trineo del jugador
+        updateSledPositions();
+    }
+}
+
+document.getElementById('startRaceButton').addEventListener('click', () => {
+    document.getElementById('startScreen').style.display = 'none';
+    document.getElementById('countdown').style.display = 'block';
+    let countdown = 3;
+    const countdownInterval = setInterval(() => {
+        document.getElementById('countdown').textContent = countdown;
+        countdown--;
+        if (countdown < 0) {
+            clearInterval(countdownInterval);
+            document.getElementById('countdown').style.display = 'none';
+            document.getElementById('raceCanvas').style.display = 'block';
+            startRace();
+        }
+    }, 1000);
+});
+
+document.addEventListener('keydown', handleKeyPress);

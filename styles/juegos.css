@@ -48,7 +48,7 @@
     padding: 2%;
 }
 
-h1 {
+#juega h1 {
     position: absolute;
     top: 50%;
     right: 0;
@@ -88,12 +88,6 @@ h1 {
     cursor: url("/styles/images/cursor.png"), not-allowed;
 }
 
-.juego-visible {
-    display: flex;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
 /* Botón */
 .play-btn {
     margin-top: 10px;
@@ -108,19 +102,23 @@ h1 {
 
 .close-btn {
     position: absolute;
-    top: 10px;
+    bottom: 10px;
     right: 10px;
     padding: 5px 10px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
     background-color: #ff0000;
     color: white;
     border: none;
-    border-radius: 5px;
-    z-index: 1001; /* Asegúrate de que esté por encima del contenido del juego */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    transform: rotate(90deg);
 }
-
-
 
 #raceCanvas {
     border: 1px solid black;
