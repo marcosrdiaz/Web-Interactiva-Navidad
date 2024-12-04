@@ -129,3 +129,41 @@
     width: 100px;
     height: auto;
 }
+
+#startScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("/styles/images/nieve.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    
+    
+    
+}
+
+#startRaceButton {
+    padding: 15px 30px; /* Botón más grande */
+    font-size: 1.5rem; /* Tamaño del texto más grande */
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para mejor visibilidad */
+    transition: background-color 0.3s ease; /* Efecto hover suave */
+    transform: rotate(90deg);
+    position: fixed;
+    top: 50%;
+    
+}
+
+#startRaceButton:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el mouse */
+}
