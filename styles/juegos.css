@@ -1,6 +1,6 @@
 
 .game-container {
-    height: 100vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     scroll-snap-type: y mandatory;
@@ -8,28 +8,33 @@
 }
 
 .game {
-    height: 100vh;
+    width: 80%; 
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
-    background: #f0f0f0;
+    background-color: #FFEBEB;
     border-bottom: 1px solid #ccc;
     padding: 15px;
     text-align: center;
+    margin: auto; 
+    border-radius: 50px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px; 
 }
 
 .game:nth-child(odd) {
-    background: #dfe7fd;
+    background: #FFEBEB;
 }
 
 .game:nth-child(even) {
-    background: #c8d6e5;
+    background: #FFEBEB;
 }
 
 .game img {
-    max-width: 600px;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -52,14 +57,11 @@
     position: absolute;
     top: 50%;
     right: 0;
-    font-size: 1.5rem;
-    color: black;
+    font-size: 1.5rem; 
     transform: rotate(90deg);
-    
 }
 
 /* Juego 1 */
-
 
 #target {
     transform: rotate(90deg);
@@ -67,7 +69,45 @@
     width: 80px;
     height: 80px;
     transition: transform 0.1s ease;
-    
+}
+
+#pistola {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    top:40%;
+    left:-20px;
+    transform: rotate(90deg);
+}
+
+#pantallaVictoria {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    text-align: center;
+    background-image: url("/styles/images/grinch-muerto.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#pantallaVictoria h1 {
+    font-size: 3rem;
+    background-color: #ff0000;
+    color: black;
+    position: fixed;
+    right: 45%;  
+    margin: 0;
+    padding: 0;
 }
 
 /* Juego oculto por defecto */
@@ -85,7 +125,7 @@
     align-items: center;
     overflow: hidden;
     margin: 0 auto;
-    cursor: url("/styles/images/cursor.png"), not-allowed;
+    cursor: url("/styles/images/mira.png") 25 25, not-allowed;
 }
 
 /* Botón */
@@ -94,7 +134,7 @@
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
-    background-color: #007bff;
+    background-color: #F2545B;
     color: white;
     border: none;
     border-radius: 5px;

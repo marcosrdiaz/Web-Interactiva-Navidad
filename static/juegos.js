@@ -2,6 +2,7 @@ function abrirJuego1() {
     cerrarTodosLosJuegos();
     const juego1 = document.getElementById('juego1');
     juego1.style.display = 'block';
+    document.getElementById('pantallaVictoria').style.display = 'none';
     moverObjetivo(); // Mueve el objetivo al iniciar el juego
 }
 
@@ -37,6 +38,7 @@ function cerrarTodosLosJuegos() {
 // Lógica del juego 1 (Detén al Grinch)
 const target = document.getElementById('target');
 const scoreDisplay = document.getElementById('score');
+const pantallaVictoria = document.getElementById('pantallaVictoria');
 let score = 0;
 
 
@@ -54,10 +56,16 @@ function moverObjetivo() {
 target.addEventListener('click', () => {
     score += 5;
     moverObjetivo();
+    if (score >= 10) {
+        mostrarVictoria();
+    }
 });
 
+function mostrarVictoria() {
+    pantallaVictoria.style.display = 'flex';  // Mostramos la pantalla oculta
+}
+
 // Lógica del juego 2 (Carrera de trineos)
-// Referencias a elementos importantes
 // Referencias a elementos importantes
 const startScreen = document.getElementById('startScreen');
 const countdown = document.getElementById('countdown');
@@ -83,9 +91,9 @@ function resetPositions() {
 startButton.addEventListener('click', startRace);
 
 function startRace() {
-    resetPositions(); // Restablece las posiciones iniciales
-    startScreen.style.display = 'none'; // Oculta la pantalla de inicio
-    countdown.style.display = 'block'; // Muestra el contador
+    resetPositions(); 
+    startScreen.style.display = 'none'; 
+    countdown.style.display = 'block'; 
     let counter = 3;
 
     const timer = setInterval(() => {
@@ -115,6 +123,14 @@ function startGame() {
         playerSled.style.top = `${playerPositionY}px`;
     });
 
+    // Movimiento del jugador (barra espaciadora para avanzar)
+    window.addEventListener('keydown', (event) => {
+        if (event.code === 'Space') {
+            playerPositionY += 10; // Incrementa la posición del jugador hacia abajo
+            playerSled.style.top = `${playerPositionY}px`;
+        }
+    });
+
     // Movimiento automático de los trineos 2 y 3
     const interval = setInterval(() => {
         sled2PositionY += Math.random() * 5 + 1; // Movimiento aleatorio hacia abajo
@@ -138,7 +154,11 @@ function declareWinner(playerPos, sled2Pos, sled3Pos) {
     } else if (sled3Pos >= 600 && sled3Pos > playerPos && sled3Pos > sled2Pos) {
         winner = 'Trineo 3';
     }
-
     alert(`¡${winner} ha ganado la carrera!`);
+    raceCanvas.style.display = 'none';
+    playerSled.style.display = 'none';
+    sled2.style.display = 'none';
+    sled3.style.display = 'none';
+    startScreen.style.display = 'block';
 }
 
