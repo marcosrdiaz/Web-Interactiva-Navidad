@@ -8,12 +8,14 @@
     <script src="/static/home.js" async></script>
     <script src="/static/villancicos.js" async></script>
     <script src="/static/juegos.js" async></script>
+    <script src="/static/galeria.js" async></script>
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="/styles/juegos.css">
     <link rel="stylesheet" href="/styles/SobreSanta.css">
     <link rel="stylesheet" href="/styles/villancicos.css">
+    <link rel="stylesheet" href="/styles/galeria.css">
     <title>Sigue a Santa</title>
 </head>
 <body>
@@ -30,7 +32,7 @@
             <a href="#EscribeCarta">Escribe tu carta</a>
             <a href="#LLamaSanta">Llama a Santa</a>
             <a href="#ReservaViaje">Reserva tu viaje</a>
-            <a href="#Juega">¡Juega!</a>
+            <a href="#juega">¡Juega!</a>
             <a href="#Cocina">Cocina</a>
             <a href="#Galeria">Galeria</a>
             <a href="#Villancicos">Villancicos</a>
@@ -82,7 +84,48 @@
             <p>Cocina</p>
         </section>
         <section id="Galeria">
-            <p>Galeria</p>
+            <h1>Galería de Imágenes Navideñas</h1>
+            <div class="slideshow-container">
+        
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 6</div>
+                    <img class="gallery-image" src="/styles/images/navidad1.jpg" alt="Imagen Navideña 1">
+                    
+                </div>
+        
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 6</div>
+                    <img class="gallery-image" src="/styles/images/navidad2.jpg" alt="Imagen Navideña 2">
+                    
+                </div>
+        
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 6</div>
+                    <img class="gallery-image" src="/styles/images/navidad3.jpg" alt="Imagen Navideña 3">
+                    
+                </div>
+        
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 6</div>
+                    <img class="gallery-image" src="/styles/images/navidad4.jpg" alt="Imagen Navideña 4">
+                    
+                </div>
+        
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 6</div>
+                    <img class="gallery-image" src="/styles/images/navidad5.jpg" alt="Imagen Navideña 5">
+                    
+                </div>
+        
+                <div class="mySlides fade">
+                    <div class="numbertext">6 / 6</div>
+                    <img class="gallery-image" src="/styles/images/navidad6.jpg" alt="Imagen Navideña 6">
+                    
+                </div>
+            </div>
+        
+            <!-- Next button -->
+            <button class="next-btn" onclick="nextSlide()">Siguiente</button>
         </section>
         <section id="Villancicos">
             <h1>Reproductor de Villancicos</h1>
@@ -112,13 +155,13 @@
                     <h2>Detén al Grinch</h2>
                     <p>¡Acaba con el enemigo de la Navidad!</p>
                     <img src="/styles/images/grinch.jpg" alt="Juego 1">
-                    <button class="play-btn" onclick="abrirJuego1()">Jugar</button>
+                    <button class="play-btn" onclick="abrirJuego1()">Start</button>
                 </div>
                 <div class="game" data-game="juego2">
                     <h2>Carrera de trineos</h2>
                     <p>¡Llega el primero a la meta!</p>
                     <img src="/styles/images/trineo.png" alt="Juego 2">
-                    <button class="play-btn" onclick="abrirJuego2()">Jugar</button>
+                    <button class="play-btn" onclick="abrirJuego2()">Start</button>
                 </div>
             </div>
         

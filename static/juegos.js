@@ -91,9 +91,9 @@ function resetPositions() {
 startButton.addEventListener('click', startRace);
 
 function startRace() {
-    resetPositions(); // Restablece las posiciones iniciales
-    startScreen.style.display = 'none'; // Oculta la pantalla de inicio
-    countdown.style.display = 'block'; // Muestra el contador
+    resetPositions(); 
+    startScreen.style.display = 'none'; 
+    countdown.style.display = 'block'; 
     let counter = 3;
 
     const timer = setInterval(() => {
