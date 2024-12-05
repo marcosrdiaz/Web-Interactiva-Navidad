@@ -6,17 +6,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
     <script src="/static/home.js" async></script>
+    <script src="/static/llamada-santa.js" async></script>
     <script src="/static/villancicos.js" async></script>
     <script src="/static/juegos.js" async></script>
+<<<<<<< HEAD
     <script src="/static/users.js" async></script>
+=======
+    <script src="/static/galeria.js" async></script>
+>>>>>>> 7053554bd5bf3dbd1be8168343b55b52d5d1d0bc
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/llamada-santa.css">
     <link rel="stylesheet" href="/styles/juegos.css">
     <link rel="stylesheet" href="/styles/SobreSanta.css">
     <link rel="stylesheet" href="/styles/recetas.css">
     <link rel="stylesheet" href="/styles/villancicos.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="/styles/modals.css">
+=======
+    <link rel="stylesheet" href="/styles/galeria.css">
+>>>>>>> 7053554bd5bf3dbd1be8168343b55b52d5d1d0bc
     <title>Sigue a Santa</title>
 </head>
 <body>
@@ -98,10 +108,10 @@
         </div>
         <!-- El resto de secciones -->
         <section id="home">
-            <h1>Sigue a Papa Noel</h1>
+            <h1 class="titulo">Sigue a Papa Noel</h1>
             <div class="contador-navidad">XXD XXH XXS</div>
         </section>
-        <section id="SobreSanta" class="seccion2">
+        <section class="seccion2" id="SobreSanta">
             <section class="izquierda">
                 <h2 class="titulo2">Sobre Papá Noel</h2>
                 <img src="/styles/images/renos.png" alt="santa" class="imagen">
@@ -132,8 +142,22 @@
         <section id="EscribeCarta">
             <p>EscribeCarta</p>
         </section>
-        <section id="LLamaSanta">
-            <p>LLamaSanta</p>
+        <section class="seccion5" id="LLamaSanta">
+            <div class="call-container">
+                <h1 class="titulo">¡Llama a Santa!</h1>
+                <div class="video-placeholder">
+                  <video id="santaVideo" src="./styles/videos/santa-video.mp4" controls hidden></video>
+                </div>
+                <div class="buttons">
+                    <button id="callButton" class="button-icon">
+                      <img src="./styles/images/phone-call.png" alt="Llamar" />
+                    </button>
+                    <button id="hangUpButton" class="button-icon" disabled>
+                      <img src="./styles/images/phone-hangup.png" alt="Colgar" />
+                    </button>
+                  </div>
+                <p id="message"></p>
+              </div>
         </section>
         <section id="ReservaViaje">
             <p>ReservaViaje</p>
@@ -160,7 +184,48 @@
             </div>
         </section>
         <section id="Galeria">
-            <p>Galeria</p>
+            <h1>Galería de Imágenes Navideñas</h1>
+            <div class="slideshow-container">
+        
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 6</div>
+                    <img class="gallery-image" src="/styles/images/navidad1.jpg" alt="Imagen Navideña 1">
+                    
+                </div>
+        
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 6</div>
+                    <img class="gallery-image" src="/styles/images/navidad2.jpg" alt="Imagen Navideña 2">
+                    
+                </div>
+        
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 6</div>
+                    <img class="gallery-image" src="/styles/images/navidad3.jpg" alt="Imagen Navideña 3">
+                    
+                </div>
+        
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 6</div>
+                    <img class="gallery-image" src="/styles/images/navidad4.jpg" alt="Imagen Navideña 4">
+                    
+                </div>
+        
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 6</div>
+                    <img class="gallery-image" src="/styles/images/navidad5.jpg" alt="Imagen Navideña 5">
+                    
+                </div>
+        
+                <div class="mySlides fade">
+                    <div class="numbertext">6 / 6</div>
+                    <img class="gallery-image" src="/styles/images/navidad6.jpg" alt="Imagen Navideña 6">
+                    
+                </div>
+            </div>
+        
+            <!-- Next button -->
+            <button class="next-btn" onclick="nextSlide()">Siguiente</button>
         </section>
         <section id="Villancicos">
             <h1>Reproductor de Villancicos</h1>
@@ -190,42 +255,46 @@
                     <h2>Detén al Grinch</h2>
                     <p>¡Acaba con el enemigo de la Navidad!</p>
                     <img src="/styles/images/grinch.jpg" alt="Juego 1">
-                    <button class="play-btn" onclick="abrirJuego1()">Jugar</button>
+                    <button class="play-btn" onclick="abrirJuego1()">Start</button>
                 </div>
                 <div class="game" data-game="juego2">
                     <h2>Carrera de trineos</h2>
                     <p>¡Llega el primero a la meta!</p>
                     <img src="/styles/images/trineo.png" alt="Juego 2">
-                    <button class="play-btn" onclick="abrirJuego2()">Jugar</button>
+                    <button class="play-btn" onclick="abrirJuego2()">Start</button>
                 </div>
             </div>
         
             <!-- Contenedor del juego oculto -->
             <div id="juego1" class="juego-oculto" style="display: none;">
                 <h1>Puntos: <span id="score">0</span></h1> 
+                <img src="/styles/images/pipa.png" alt="Pistola" id="pistola">
                 <img src="/styles/images/target-horizontal.png" alt="Objetivo" id="target">
+                
                 <img src="/styles/images/fondoMT-horizontal.png" alt="fondoMT-horizontal" id="fondo-hor">
-                <button class="close-btn" onclick="cerrarJuego1()">Cerrar</button>
                 
-                
-                
+                <button class="close-btn" onclick="cerrarJuego1()">X</button>
+                <div id="pantallaVictoria">
+                    
+                    <h1>¡HAS DERROTADO AL GRINCH!</h1>
+                </div>
             </div>
         
-            <div id="juego2" class="juego-oculto" style="display: none;">
-                <button class="close-btn" onclick="cerrarJuego2()">Cerrar</button>
-                <h2>Carrera de trineos - Juego</h2>
+            <div id="juego2" class="juego-oculto">
+                <button class="close-btn" onclick="cerrarJuego2()">X</button>
                 <div class="game-container">
-                    <canvas id="raceCanvas" width="800" height="400"></canvas>
-                    <div>
-                        <button id="startRace">Iniciar Carrera</button>
+                    <div id="startScreen">
+                        <p>Haz click en la pantalla para avanzar con tu trineo.</p>
+                        <button id="startRaceButton">Iniciar Carrera</button>
                     </div>
-                    <img id="playerSled" src="/styles/images/trineo-png.png" alt="Trineo 1" style="position: absolute; top: 50px;">
-                    <img id="sled2" src="/styles/images/trineo-png.png" alt="Trineo 2" style="position: absolute; top: 150px;">
-                    <img id="sled3" src="/styles/images/trineo-png.png" alt="Trineo 3" style="position: absolute; top: 250px;">
+                    <div id="countdown" style="display: none; font-size: 2rem; text-align: center;"></div>
+                    <canvas id="raceCanvas" width="600" height=auto style="display: none;"></canvas>
+                    <img id="playerSled" src="/styles/images/trineo-png-horizontal.png" alt="Trineo 1">
+                    <img id="sled2" src="/styles/images/trineo-png-horizontal.png" alt="Trineo 2">
+                    <img id="sled3" src="/styles/images/trineo-png-horizontal.png" alt="Trineo 3">
                 </div>
             </div>
         </section>
-        
     </main>
 </body>
 </html>
