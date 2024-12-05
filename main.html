@@ -6,11 +6,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
     <script src="/static/home.js" async></script>
+    <script src="/static/llamada-santa.js" async></script>
     <script src="/static/villancicos.js" async></script>
     <script src="/static/juegos.js" async></script>
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/llamada-santa.css">
     <link rel="stylesheet" href="/styles/juegos.css">
     <link rel="stylesheet" href="/styles/SobreSanta.css">
     <link rel="stylesheet" href="/styles/villancicos.css">
@@ -38,10 +40,10 @@
     </header>
     <main>
         <section id="home">
-            <h1>Sigue a Papa Noel</h1>
+            <h1 class="titulo">Sigue a Papa Noel</h1>
             <div class="contador-navidad">XXD XXH XXS</div>
         </section>
-        <section id="SobreSanta" class="seccion2">
+        <section class="seccion2" id="SobreSanta">
             <section class="izquierda">
                 <h2 class="titulo2">Sobre Papá Noel</h2>
                 <img src="/styles/images/renos.png" alt="santa" class="imagen">
@@ -72,8 +74,22 @@
         <section id="EscribeCarta">
             <p>EscribeCarta</p>
         </section>
-        <section id="LlamaSanta">
-            <p>LLamaSanta</p>
+        <section class="seccion5" id="LLamaSanta">
+            <div class="call-container">
+                <h1 class="titulo">¡Llama a Santa!</h1>
+                <div class="video-placeholder">
+                  <video id="santaVideo" src="./styles/videos/santa-video.mp4" controls hidden></video>
+                </div>
+                <div class="buttons">
+                    <button id="callButton" class="button-icon">
+                      <img src="./styles/images/phone-call.png" alt="Llamar" />
+                    </button>
+                    <button id="hangUpButton" class="button-icon" disabled>
+                      <img src="./styles/images/phone-hangup.png" alt="Colgar" />
+                    </button>
+                  </div>
+                <p id="message"></p>
+              </div>
         </section>
         <section id="ReservaViaje">
             <p>ReservaViaje</p>
@@ -105,7 +121,7 @@
                 </audio>
             </div>
         </section>
-        <section id="juega">
+        <section id="Juega">
             <p>Juegos</p>
             <div class="game-container">
                 <div class="game" data-game="juego1">
@@ -128,9 +144,6 @@
                 <img src="/styles/images/target-horizontal.png" alt="Objetivo" id="target">
                 <img src="/styles/images/fondoMT-horizontal.png" alt="fondoMT-horizontal" id="fondo-hor">
                 <button class="close-btn" onclick="cerrarJuego1()">X</button>
-                
-                
-                
             </div>
         
             <div id="juego2" class="juego-oculto">

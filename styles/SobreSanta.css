@@ -1,44 +1,42 @@
 .derecha_text{
     position: relative;
-    right: 1%;
-    margin-top: -32%;
 }
 .izquierda{
     position: relative;
-    margin-top: 7%;
-    width: 80vw;
-    left: 1%;
+    margin-top: 0%;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
 }
 .cuadrado{
-    padding: 0.98% 1.4%;
-    margin-top: 13%;
+    padding: 2% 2%;
     margin-right: 5%;
     margin-left: 10%;
     height: auto;
     width: 80%;
     background-color: antiquewhite;
     text-align: justify;
-    font-size: 18px;
-    border-radius: 7%;
+    font-size: 2vh;
+    border-radius: 5%;
     font-style: italic;
 }
 .titulo2{
     text-align: center;
-    font-size: 40px;
+    font-size: 8vh;
     color: rgb(244, 244, 244);
     font-family: "Updock", cursive;
-    font-weight: 100;
     font-style: normal;
-    padding-bottom: 2%;
 }
 .imagen{
-    width: 50vw;
-    margin-left: 10%;
+    width: 80vw;
+    height: auto;
+    margin-left: 10vw;
+    place-self: center;
 }
 .seccion2{
-    background-image: url(/styles/images/renos.png);
+    background-image: url(/styles/images/fondo2.png);
     display: flex;
     flex-direction: column;
     column-gap: 10%;
-    padding-top: 0%;
+    padding-top: 15vh;
 }
