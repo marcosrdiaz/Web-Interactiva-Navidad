@@ -15,30 +15,21 @@ header {
 .icon {
     height: 50px; /* Tamaño ajustado del ícono de Papá Noel */
     width: auto;
-    transition: transform 0.3s ease;
 }
-.icon.rotated {
-  transform: rotate(90deg); /* Rotar 90 grados */
+#tres-barras.rotated {
+    transform: translateX(-50%) rotate(90deg); /* Rotar 90 grados */
 }
 #tres-barras {
     margin: 0 auto;
     position: absolute;
     left: 50%; 
     transform: translateX(-50%);
+    transition: transform 0.3s ease;
 }
 .buttons {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-.button {
-    background-color: #d32f2f; /* Rojo navideño */
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 0.9rem;
-    cursor: pointer;
 }
 #Menu-desplegable{
     position: fixed;
@@ -46,10 +37,19 @@ header {
     display: flex;
     flex-direction: column;
     left: 50vw;
-    top:17vh;
+    top:16vh;
     transform: translateX(-50%);
     z-index: 2;
     gap: 10px;
     padding: 2.5%;
     border-radius: 10px;
+    text-align: center;
 }
+#perfilIcon {
+    height: 50px;
+    width: auto;
+}
+.hidden {
+    /* Para ocultar los botones de login y register */
+    display: none;
+} 

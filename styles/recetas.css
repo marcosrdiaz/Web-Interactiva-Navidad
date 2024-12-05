@@ -1,0 +1,32 @@
+    #Cocina {
+        background: url('/styles/images/fondoMT.png');
+        background-repeat: no-repeat;  
+        background-size: cover;        
+        max-width: 600px;
+        padding-top: 16vh;
+    }
+.box{
+    background-color: rgba(65, 78, 94, 0.832);
+    width: 90vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    overflow-y: scroll;
+    place-self: center;
+    text-align: center;   
+}
+.box p{
+    font-family: "Updock", cursive;
+    color: white;
+    font-size: 2em;
+}
+.receta{
+    display: flex;
+    flex-direction: column;
+}
+.receta img{
+    width: 50vw;
+    height: auto;
+    place-self: center;
+}

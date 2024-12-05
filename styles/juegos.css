@@ -48,7 +48,7 @@
     padding: 2%;
 }
 
-h1 {
+#juega h1 {
     position: absolute;
     top: 50%;
     right: 0;
@@ -59,7 +59,6 @@ h1 {
 }
 
 /* Juego 1 */
-
 
 #target {
     transform: rotate(90deg);
