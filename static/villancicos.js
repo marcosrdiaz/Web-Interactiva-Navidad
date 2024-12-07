@@ -6,18 +6,25 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target && e.target.tagName === "LI") {
             const src = e.target.getAttribute("data-src");
 
-            // Si el archivo seleccionado ya está cargado, no hacemos nada
-            if (audio.src !== src) {
-                // Detener la reproducción si ya se está reproduciendo algo
-                audio.pause();
+            // Detener la reproducción si ya se está reproduciendo algo
+            audio.pause();
 
-                // Cambiar la fuente de audio
-                audio.src = src;
+            // Limpia las fuentes antiguas
+            audio.innerHTML = '';
 
-                // Reproducir el nuevo audio
-                audio.load();
+            // Crea una nueva fuente
+            const source = document.createElement("source");
+            source.src = src;
+            source.type = "audio/mpeg";
+
+            // Agrega la nueva fuente al audio
+            audio.appendChild(source);
+            audio.load();
+
+            // Espera a que se pueda reproducir antes de llamar a play()
+            audio.addEventListener("canplay", () => {
                 audio.play();
-            }
+            }, { once: true });  // Se asegura de que se ejecute solo una vez
         }
     });
 });
