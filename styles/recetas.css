@@ -1,22 +1,29 @@
-    #Cocina {
-        background: url('/styles/images/fondoMT.png');
-        background-repeat: no-repeat;  
-        background-size: cover;        
-        max-width: 600px;
-        padding-top: 16vh;
-    }
-.box{
+#Cocina {
+    background: url('/styles/images/fondoMT.png');
+    background-repeat: no-repeat;  
+    background-size: cover;        
+    max-width: 600px;
+    padding-top: 16vh;
+}
+h1{
+    font-family: "Updock", cursive;
+    color: white;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+}
+.menu-recetas{
     background-color: rgba(65, 78, 94, 0.832);
     width: 90vw;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: 70vh;
     overflow-y: scroll;
     place-self: center;
     text-align: center;   
 }
-.box p{
+.menu-recetas p{
     font-family: "Updock", cursive;
     color: white;
     font-size: 2em;
@@ -29,4 +36,39 @@
     width: 50vw;
     height: auto;
     place-self: center;
+}
+.detalle-receta {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(65, 78, 94, 0.9);
+    width: 90vw;
+    height: 70vh;
+    border-radius: 10px;
+    overflow-y: scroll;
+    padding: 15px;
+    text-align: center;
+    place-self: center;
+    color: white;
+}
+.detalle-receta h2 {
+    font-family: "Updock", cursive;
+    font-size: 2em;
+    color: white;
+}
+.detalle-receta img {
+    width: 60vw;
+    margin: 10px auto;
+}
+.detalle-receta button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+.detalle-receta button:hover {
+    background-color: #c0392b;
 }

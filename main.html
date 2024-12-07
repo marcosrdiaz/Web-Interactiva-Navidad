@@ -11,6 +11,7 @@
     <script src="/static/juegos.js" async></script>
     <script src="/static/users.js" async></script>
     <script src="/static/galeria.js" async></script>
+    <script src="/static/recetas.js" async></script>
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/home.css">
@@ -157,25 +158,29 @@
             <p>ReservaViaje</p>
         </section>
         <section id="Cocina">
-            <h1>Nuestas Recetas</h1>
-            <div class="box">
-                <div class="receta">
+            <h1>Nuestras Recetas</h1>
+            <div class="menu-recetas">
+                <div class="receta" onclick="mostrarReceta('tortitas')">
                     <p>Sabrosas tortitas</p>
                     <img src="/styles/images/pankakes.png">
                 </div>
-                <div class="receta">
+                <div class="receta" onclick="mostrarReceta('caramelo')">
                     <p>Bastón de caramelo</p>
                     <img src="/styles/images/baston_caramelo.png">
                 </div>
-                <div class="receta">
+                <div class="receta" onclick="mostrarReceta('galletas')">
                     <p>Galletas</p>
                     <img src="/styles/images/galletas.jpg">
                 </div>
-                <div class="receta">
+                <div class="receta" onclick="mostrarReceta('chocolate')">
                     <p>Chocolate caliente</p>
                     <img src="/styles/images/chocolate.png">
                 </div>
             </div>
+            <div class="receta detalle-receta" id="tortitas"></div>
+            <div class="receta detalle-receta" id="caramelo"></div>
+            <div class="receta detalle-receta" id="galletas"></div>
+            <div class="receta detalle-receta" id="chocolate"></div>
         </section>
         <section id="Galeria">
             <h1>Galería de Imágenes Navideñas</h1>
