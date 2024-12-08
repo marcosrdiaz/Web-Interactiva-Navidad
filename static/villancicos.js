@@ -1,30 +1,41 @@
 document.addEventListener("DOMContentLoaded", () => {
     const playlist = document.getElementById("playlist");
     const audio = document.getElementById("audio");
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
 
+    let currentIndex = 0;
+    const items = playlist.querySelectorAll("li");
+
+    // Función para actualizar la canción activa
+    const updateActiveSong = (index) => {
+        items.forEach((item) => item.classList.remove("active"));
+        items[index].classList.add("active");
+        const src = items[index].getAttribute("data-src");
+        audio.src = src;
+        audio.play();
+    };
+
+    // Evento de clic en elementos de la lista
     playlist.addEventListener("click", (e) => {
         if (e.target && e.target.tagName === "LI") {
-            const src = e.target.getAttribute("data-src");
-
-            // Detener la reproducción si ya se está reproduciendo algo
-            audio.pause();
-
-            // Limpia las fuentes antiguas
-            audio.innerHTML = '';
-
-            // Crea una nueva fuente
-            const source = document.createElement("source");
-            source.src = src;
-            source.type = "audio/mpeg";
-
-            // Agrega la nueva fuente al audio
-            audio.appendChild(source);
-            audio.load();
-
-            // Espera a que se pueda reproducir antes de llamar a play()
-            audio.addEventListener("canplay", () => {
-                audio.play();
-            }, { once: true });  // Se asegura de que se ejecute solo una vez
+            currentIndex = Array.from(items).indexOf(e.target);
+            updateActiveSong(currentIndex);
         }
     });
+
+    // Botón Anterior
+    prevButton.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        updateActiveSong(currentIndex);
+    });
+
+    // Botón Siguiente
+    nextButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateActiveSong(currentIndex);
+    });
+
+    // Reproducir automáticamente al iniciar
+    updateActiveSong(currentIndex);
 });
