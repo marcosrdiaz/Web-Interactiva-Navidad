@@ -1,0 +1,87 @@
+h1{
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Updock", cursive;
+    margin-bottom: 2vh;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 90vw;
+    max-height: 80vh;
+    min-height: 50vh;
+    background-color: bisque;
+    border-radius: 10px;
+    place-self: center;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+    width: 80vw;
+    place-self: center;
+}
+
+.grupo-input label {
+    font-size: 2rem;
+    margin-bottom: 0.5vh;
+    text-align: center;
+    font-family: 'Updock', cursive;
+}
+
+.grupo-input input {
+    margin-top: 3px;
+    padding: 5px, 1vw;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.grupo-input textarea {
+    padding: 5px, 1vw;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+    height: auto;
+    min-height: 30vh;
+    max-height: 60vh;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #007BFF;
+    text-align: start;
+}
+
+.input-group.full-width {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.submit-btn {
+    padding: 1vh 1vw;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ee3636;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 85vw;
+    margin-bottom: 10px;
+    place-self: center;
+}
+
+.submit-btn:hover {
+    background-color: #b62e2e;
+}

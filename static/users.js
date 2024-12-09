@@ -120,7 +120,8 @@ document.getElementById('registerForm').addEventListener('submit', function (eve
         username: username,
         mail: mail,
         password: pass1,
-        genero: genero
+        genero: genero,
+        cartas:[]
     };
     users.push(newUser);
     localStorage.setItem("usersSanta",JSON.stringify(users));

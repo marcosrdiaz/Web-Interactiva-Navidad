@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/styles/villancicos.css">
     <link rel="stylesheet" href="/styles/modals.css">
     <link rel="stylesheet" href="/styles/galeria.css">
+    <link rel="stylesheet" href="/styles/escribeTuCarta.css">
     <title>Sigue a Santa</title>
 </head>
 <body>
@@ -135,7 +136,22 @@
             <p>Mapa</p>
         </section>
         <section id="EscribeCarta">
-            <p>EscribeCarta</p>
+            <h1>Escribe tu carta</h1>
+            <form class="form-container">
+                <div class="grupo-input">
+                    <label for="emailCarta">Correo electrónico</label>
+                    <input type="email" id="emailCarta" name="email" required>
+                </div>
+                <div class="grupo-input">
+                    <label for="usernameCarta">Nombre de Usuario</label>
+                    <input type="text" id="usernameCarta" name="username" required>
+                </div>
+                <div class="grupo-input full-width">
+                    <label for="letterCarta">Carta</label>
+                    <textarea id="letterCarta" name="letter" maxlength="600" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar Carta</button>
+            </form>
         </section>
         <section class="seccion5" id="LLamaSanta">
             <div class="call-container">

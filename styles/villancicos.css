@@ -9,7 +9,7 @@ body {
 .villancicos {
     text-align: center;
     padding: 20px;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 h1 {
@@ -20,6 +20,7 @@ h1 {
 }
 
 .player {
+    position:relative;
     background: white;
     border-radius: 15px;
     padding: 20px;
@@ -27,11 +28,13 @@ h1 {
     display: inline-block;
     max-width: 400px;
     width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Playlist */
 ul#playlist {
-    max-height: 200px;
+    max-height: 50vh;
     overflow-y: auto;
     margin: 0;
     padding: 0;
@@ -52,12 +55,12 @@ ul#playlist li {
 }
 
 ul#playlist li:hover {
-    background-color: #FFE082;
+    background-color: #ff8282;
     transform: translateX(5px);
 }
 
 ul#playlist li.active {
-    background-color: #FFCC80;
+    background-color: #ff8080;
     font-weight: bold;
     border-left: 5px solid #FF7043;
 }
@@ -83,8 +86,7 @@ audio {
     display: flex;
     justify-content: space-between;
 }
-
-button {
+.controls button {
     background: linear-gradient(135deg, #FF7043, #D84315);
     border: none;
     color: white;
@@ -96,12 +98,12 @@ button {
     outline: none;
 }
 
-button:hover {
+.controls button:hover {
     background: linear-gradient(135deg, #E64A19, #BF360C);
     transform: scale(1.1);
 }
 
-button:active {
+.controls button:active {
     transform: scale(1);
 }
 
