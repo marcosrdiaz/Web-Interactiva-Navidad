@@ -1,0 +1,71 @@
+.reservation-container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 25px 40px;
+  width: 450px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  box-shadow: inset 0 2px 5px rgba(224, 15, 43, 0.281);
+}
+
+input:focus, select:focus {
+  outline: none;
+  border: 1px solid #7FB3D5;
+  box-shadow: 0 0 8px rgba(127, 179, 213, 0.6);
+}
+
+.button-group {
+  display: flex;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-left: 6em;
+  gap: 2em;
+}
+
+
+#confirm {
+  background: linear-gradient(135deg, #11aa6d, #40a978);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#confirm:hover {
+  background-color: #218838;
+}
+
+#cancel {
+  background: linear-gradient(135deg, #ff0000, #850404);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#cancel:hover {
+  background-color: #c82333;
+}

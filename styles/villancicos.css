@@ -1,12 +1,5 @@
 /* General */
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #e3f2fd, #ffebee);
-    margin: 0;
-    padding: 0;
-}
-
-.villancicos {
+#villancicos {
     text-align: center;
     padding: 20px;
     height: 100vh;
