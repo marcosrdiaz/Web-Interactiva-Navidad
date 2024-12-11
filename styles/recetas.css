@@ -79,6 +79,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+        overflow-y: hidden;
     }
     .receta img{
         height: 15vh;
@@ -86,7 +87,7 @@
         object-fit: cover;
     }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     #Cocina{
         max-width: none;
         padding-top: 10vh;
@@ -95,6 +96,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+        overflow-y: hidden;
     }
     .receta img{
         height: 15vh;

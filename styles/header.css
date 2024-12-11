@@ -1,3 +1,4 @@
+
 header {
     display: flex;
     position: fixed;
@@ -12,6 +13,7 @@ header {
     margin-left: 0px;
     z-index: 2;
 }
+
 .icon {
     height: 50px;
     width: auto;
@@ -138,5 +140,11 @@ footer:hover p {
     }
     .buttons{
         padding-right: 1%;
+    }
+    .icon {
+        height: 100px;
+    }
+    #perfilIcon {
+        height: 100px;
     }
 }

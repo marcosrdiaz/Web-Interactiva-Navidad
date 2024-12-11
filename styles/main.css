@@ -111,7 +111,7 @@ a {
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     main{
         max-width: none;
         overflow-x: hidden;

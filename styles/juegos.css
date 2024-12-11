@@ -279,6 +279,8 @@
         flex-direction: row;
         position: relative;
         top: -10vh;
+        scroll-snap-type: none;
+        overflow-y: hidden;
     }
     
     .game {
