@@ -13,6 +13,10 @@
     <script src="/static/galeria.js" async></script>
     <script src="/static/recetas.js" async></script>
     <script src="/static/reservar_viaje.js" async></script>
+    <script src="/static/mapa.js" async></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/home.css">
@@ -25,6 +29,7 @@
     <link rel="stylesheet" href="/styles/galeria.css">
     <link rel="stylesheet" href="/styles/escribeTuCarta.css">
     <link rel="stylesheet" href="/styles/reservar_viaje.css">
+    <link rel="stylesheet" href="/styles/mapa.css">
     <title>Sigue a Santa</title>
 </head>
 <body>
@@ -135,7 +140,8 @@
             </section>
         </section>
         <section id="Mapa">
-            <p>Mapa</p>
+            <h1>¡Encuentra a Papá Noel!</h1>
+            <div id="map"></div>
         </section>
         <section id="EscribeCarta">
             <h1>Escribe tu carta</h1>
