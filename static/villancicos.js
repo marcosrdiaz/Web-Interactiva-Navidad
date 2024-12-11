@@ -43,4 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Reproducir automáticamente al iniciar
     updateActiveSong(currentIndex);
+
+    // Reproducir la siguiente canción cuando termine la actual
+    audio.addEventListener("ended", () => {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateActiveSong(currentIndex);
+    });
 });
