@@ -5,7 +5,7 @@
     max-width: 600px;
     padding-top: 16vh;
 }
-h1{
+#Cocina h1{
     font-family: "Updock", cursive;
     color: white;
     font-size: 60px;
@@ -76,9 +76,7 @@ h1{
 @media only screen and (min-width: 601px) and (max-width: 768px) {
     #Cocina{
         max-width: 768px;
-    }
-    h1{
-        font-size: 80px;
+        padding-top: 7vh;
     }
     .menu-recetas{
         display: grid;
@@ -89,5 +87,24 @@ h1{
         height: 15vh;
         width: auto;
         object-fit: cover;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #Cocina{
+        max-width: none;
+        padding-top: 10vh;
+    }
+    .menu-recetas{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .receta img{
+        height: 15vh;
+        width: auto;
+        object-fit: cover;
+    }
+    .detalle-receta {
+        height: 65vh;
     }
 }

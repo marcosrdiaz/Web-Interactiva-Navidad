@@ -99,7 +99,7 @@ h1{
     justify-content: center;
     color: #fff;
     font-family: Arial, sans-serif;
-    z-index: 1000;
+    z-index: 10;
 }
 
 .carta-content-section {
@@ -108,7 +108,9 @@ h1{
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 20px;
+    margin-top: 15vh;
+    height: auto;
+    max-height: 70vh;
 }
 
 .controls-section {
@@ -130,4 +132,13 @@ h1{
     background-color: #0056b3;
 }
 
-
+/* Vista para pantallas >= 769px */
+@media only screen and (min-width: 769px) {
+    #EscribeCarta{
+        padding-top: 14vh;
+    }
+    .grupo-input textarea {
+        min-height: 20vh;
+        max-height: 50vh;
+    }
+}
