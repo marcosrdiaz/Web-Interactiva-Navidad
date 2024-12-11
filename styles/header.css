@@ -4,7 +4,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #73BA9B;
-    height: 15vh; /* 15% del alto de la pantalla */
+    height: 15vh;
     max-width: 600px; /* Tamaño móvil */
     width: 100vw;
     box-sizing: border-box; /* Incluye el padding en el ancho total */
@@ -13,11 +13,11 @@ header {
     z-index: 2;
 }
 .icon {
-    height: 50px; /* Tamaño ajustado del ícono de Papá Noel */
+    height: 50px;
     width: auto;
 }
 #tres-barras.rotated {
-    transform: translateX(-50%) rotate(90deg); /* Rotar 90 grados */
+    transform: translateX(-50%) rotate(90deg);
 }
 #tres-barras {
     margin: 0 auto;
@@ -30,6 +30,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-right: 2.5%;
 }
 #Menu-desplegable{
     position: fixed;
@@ -49,16 +50,18 @@ header {
     height: 50px;
     width: auto;
 }
+#Menu-grid {
+    display: none;
+}
 
 .hidden {
-    /* Para ocultar los botones de login y register */
     display: none;
 } 
 
-@media only screen and (min-width: 601px) and (max-width: 768px) {
+@media only screen and (min-width: 601px) and (max-width: 928px) {
     header {
         height: 10vh;
-        max-width: 768px;
+        max-width: 928px;
     }
     .icon {
         height: 65px;
@@ -72,5 +75,47 @@ header {
     }
     #Menu-desplegable a{
         font-size: 1.5em;
+    }
+    .buttons{
+        padding: 2%;
+    }
+    .buttons .btn{
+        height: 4vh;
+    }
+}
+/* No cabe bien hasta los 929px, hasta entoces usar formato 'tablet'*/
+@media only screen and (min-width: 929px) {
+    header {
+        align-items: center;
+        padding: 0 20px;
+        max-width: none;
+    }
+    #tres-barras {
+        display: none;
+    }
+    #Menu-desplegable {
+        display: none;
+    }
+    #Menu-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+    #Menu-grid a {
+        padding: 10px;
+        background-color: rgba(115, 186, 155, 0.8);
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+    #Menu-grid a:hover {
+        background-color: #4f9075;
+    }
+    .buttons{
+        padding-right: 1%;
     }
 }

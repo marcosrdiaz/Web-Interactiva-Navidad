@@ -89,3 +89,22 @@
         object-fit: cover;
     }
 }
+@media only screen and (min-width: 768px) {
+    #Cocina{
+        max-width: none;
+        padding-top: 10vh;
+    }
+    .menu-recetas{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .receta img{
+        height: 15vh;
+        width: auto;
+        object-fit: cover;
+    }
+    .detalle-receta {
+        height: 65vh;
+    }
+}
