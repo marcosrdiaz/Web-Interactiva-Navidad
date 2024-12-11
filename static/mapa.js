@@ -1,3 +1,4 @@
+let L;
 // Inicializar mapa
 const map = L.map('map').setView([0, 0], 2); // Coordenadas iniciales
 

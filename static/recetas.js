@@ -118,5 +118,15 @@ function mostrarReceta(idReceta) {
 
 function volverAlMenu() {
     document.querySelectorAll(".detalle-receta").forEach(div => div.style.display = "none");
-    document.querySelector(".menu-recetas").style.display = "flex";
+    const menuRecetas = document.querySelector(".menu-recetas");
+
+    // Restablecer el estilo de display según el tamaño de la pantalla
+    if (window.innerWidth <= 600) {
+        menuRecetas.style.display = "flex";
+        menuRecetas.style.flexDirection = "column";
+    } else {
+        menuRecetas.style.display = "grid";
+        menuRecetas.style.gridTemplateColumns = "1fr 1fr";
+        menuRecetas.style.gap = "10px";
 }
+    } 

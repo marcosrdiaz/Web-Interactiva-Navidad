@@ -16,8 +16,8 @@ h1{
     background-color: rgba(65, 78, 94, 0.832);
     width: 90vw;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     height: 70vh;
     overflow-y: scroll;
     place-self: center;
@@ -71,4 +71,23 @@ h1{
 }
 .detalle-receta button:hover {
     background-color: #c0392b;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    #Cocina{
+        max-width: 768px;
+    }
+    h1{
+        font-size: 80px;
+    }
+    .menu-recetas{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .receta img{
+        height: 15vh;
+        width: auto;
+        object-fit: cover;
+    }
 }
