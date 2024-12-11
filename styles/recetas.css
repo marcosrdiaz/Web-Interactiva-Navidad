@@ -1,7 +1,4 @@
-#Cocina {
-    background: url('/styles/images/fondoMT.png');
-    background-repeat: no-repeat;  
-    background-size: cover;        
+#Cocina {       
     max-width: 600px;
     padding-top: 16vh;
 }
