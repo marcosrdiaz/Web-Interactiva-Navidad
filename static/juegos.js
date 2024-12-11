@@ -16,6 +16,7 @@ function abrirJuego2() {
     document.getElementById('flecha').style.display = 'none';
     document.getElementById('sled2').style.display = 'none';
     document.getElementById('sled3').style.display = 'none';
+    resetPositions();
 }
 
 function cerrarJuego1() {
@@ -72,7 +73,7 @@ function moverObjetivo() {
 
         // Genera coordenadas aleatorias dentro del rango seguro
         const x = getRandomInt(0, maxX);
-        const y = getRandomInt(-(maxHeight/2), maxY/2);
+        const y = getRandomInt(-(maxHeight/2), maxY/2-targetHeight)+targetHeight;
         target.style.transform = `translate(${x}px, ${y}px)`;
     }
 }
@@ -86,7 +87,7 @@ function getRandomInt(min, max) {
 target.addEventListener('click', () => {
     score += 5;
     moverObjetivo();
-    if (score >= 50) {
+    if (score >= 1000) {
         mostrarVictoria();
     }
 });

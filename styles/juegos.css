@@ -35,6 +35,7 @@
 
 .game img {
     max-width: 100vw;
+    width: 90%;
     height: 30vh;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -269,6 +270,22 @@
     .game p {
         font-size: 5vw;
     }
+
+    .juego-oculto {
+        width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+    }
+
+    #startScreen {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #raceCanvas {
+        width: 100vw;
+        height: 100vh;
+    }
     
 }
 
@@ -277,9 +294,7 @@
 
     .game-container {
         flex-direction: row;
-        position: relative;
         top: -10vh;
-        scroll-snap-type: none;
         overflow-y: hidden;
     }
     
@@ -310,6 +325,7 @@
     #juego1 {
         width: 100vw;
         height: 100vh;
+        background-image: url("/styles/images/fondoMT.png");
     }
 
     /* Juego 1 */
@@ -323,7 +339,7 @@
         position: absolute;
         width: 600px;
         height: auto;
-        top:40%;
+        top:50vh;
         left:35vw;
         transform: none;
     }
@@ -391,7 +407,6 @@
         left: 50%;
         transform: translate(-50%);
     }
-    
     
     #raceCanvas {
         width: 100vw;
