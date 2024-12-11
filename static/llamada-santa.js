@@ -11,7 +11,8 @@ const verticalVideos = [
 const horizontalVideos = [
   "./styles/videos/VS_hor1.mp4",
   "./styles/videos/VS_hor2.mp4",
-  "./styles/videos/VS_hor3.mp4"
+  "./styles/videos/VS_hor3.mp4",
+  "./styles/videos/VS_hor4.mp4"
 ];
 
 // Asegurarse de que el video no tenga controles

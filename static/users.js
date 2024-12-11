@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (loggedInUser) {
         alert('Usuario detectado');
         const usuario = JSON.parse(loggedInUser);
-        iniciarSesion(usuario, usuario.gen);
+        iniciarSesion(usuario, usuario.genero);
     }
 });
 
