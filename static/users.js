@@ -67,10 +67,17 @@ btnRegister.onclick = function() {
 }
 
 closeLogin.onclick = function() {
+    document.getElementById('loginUsername').value = '';
+    document.getElementById('loginPassword').value = '';
     loginModal.style.display = "none";
 }
 
 closeRegister.onclick = function() {
+    document.getElementById('regUsername').value = '';
+    document.getElementById('regEmail').value = '';
+    document.getElementById('regPass1').value = '';
+    document.getElementById('regPass2').value = '';
+    document.getElementById('regGenero').value = '';
     registerModal.style.display = "none";
 }
 
@@ -179,14 +186,17 @@ function iniciarSesion(usuario, gen) {
     // Crear un botón de perfil usando una imagen en lugar de texto
     const navbar = document.getElementById('navSesion');
     const perfilButton = document.createElement('img');
-    if (gen == "masculino") { perfilButton.src = '/styles/images/perfilM.png' } // Ruta a la imagen del perfil elfo
-    else { perfilButton.src = 'styles/images/perfilM.png' };
+    if (gen == "hombre") { perfilButton.src = '/styles/images/perfilM.png' } // Ruta a la imagen del perfil elfo
+    else { perfilButton.src = 'styles/images/perfilF.png' };
     perfilButton.alt = 'Perfil';
     perfilButton.style.cursor = 'pointer'; // Cambiar el cursor al pasar por encima
 
     perfilButton.onclick = mostrarPerfilMenu;
     perfilButton.id = 'perfilIcon'; // Agregar un ID para referencia futura
     navbar.appendChild(perfilButton);
+
+    // Auto llenar el campo del formulario 'enviar carta' 
+    document.getElementById('usernameCarta').value = usuario['username'];
 }
 
 // Cerrar sesión
@@ -194,6 +204,16 @@ function cerrarSesion() {
     sessionStorage.removeItem('loggedInUser');
     location.reload(); // Recargar la página para resetear la interfaz
 }
+
+// Evitar la perdida de sesion (la foto de perfil)
+document.addEventListener("DOMContentLoaded", () => {
+    const loggedInUser = sessionStorage.getItem('loggedInUser');
+    if (loggedInUser) {
+        alert('Usuario detectado');
+        const usuario = JSON.parse(loggedInUser);
+        iniciarSesion(usuario, usuario.gen);
+    }
+});
 
 // Función para mostrar el menú de perfil
 function mostrarPerfilMenu() {

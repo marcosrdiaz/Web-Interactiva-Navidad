@@ -5,6 +5,7 @@ body{
     margin: 0 0;
 }
 
+
 main {
     position: relative;
     height: 100vh; /* 85% del alto de la pantalla */
@@ -14,12 +15,6 @@ main {
     background-size: cover; 
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
-
-
 a {
     color: inherit; 
     text-decoration: none; 
@@ -27,60 +22,88 @@ a {
 
 #home{
     height: 100vh;
+    width: 100vw;
     padding-top: 15vh;
 }
 #SobreSanta{
     height: 100vh;
+    width: 100vw;
     padding-top: 15vh;
 }
 #Mapa{
     height: 100vh;
+    width: 100vw;
     padding-top: 15vh;
 }
 #EscribeCarta{
     height: 100vh;
+    width: 100vw;
     padding-top: 15vh;
 }
 #LlamaSanta{
     height: 100vh;
+    width: 100vw;
     padding-top: 15vh;
 }
 #ReservaViaje{
     height: 100vh;
+    width: 100vw;
     padding-top: 15vh;
-}
-#Cocina{
-    height: 100vh;
-    padding-top: 16vh;
 }
 #Galeria{
     height: 100vh;
+    width: 100vw;
     padding-top: 15vh;
 }
 #Villancicos{
     height: 100vh;
+    width: 100vw;
     padding-top: 15vh;
 }
 #Cocina{
     height: 100vh;
+    width: 100vw;
     padding-top: 15vh;
 }
 #Juega{
     height: 100vh;
+    width: 100vw;
     padding-top: 15vh;
 }
 
 
-@media (min-width: 769px) {
-    main {
-        height: 85vh; /* 85% del alto de la pantalla */
-        max-width: 100vw; 
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    main{
+        max-width: 768px;
     }
-}
-
-@media (min-width: 601px) and (max-width: 768px) {
-    main {
-        height: 85vh; /* 85% del alto de la pantalla */
-        max-width: 100vw; 
+    #home{
+        padding-top: 11vh;
+    }
+    #SobreSanta{
+        padding-top: 5vh;
+    }
+    #Mapa{
+        padding-top: 11vh;
+    }
+    #EscribeCarta{
+        padding-top: 11vh;
+    }
+    #LlamaSanta{
+        padding-top: 6vh;
+    }
+    #ReservaViaje{
+        padding-top: 11vh;
+    }
+    #Galeria{
+        padding-top: 11vh;
+    }
+    #Villancicos{
+        padding-top: 11vh;
+    }
+    #Cocina{
+        padding-top: 11vh;
+    }
+    #Juega{
+        padding-top: 11vh;
     }
 }

@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: flex-start; /* Centra vertical */
     align-items: center; /* Centra horizontal */
-    width: 100%;
+    width: 100vw;
     font-size: 5vh;
     color: rgb(244, 244, 244);
     font-family: "Updock", cursive;
@@ -24,4 +24,17 @@
 
 #home .titulo {
     font-size: 8vh;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    #home {
+        font-size: 6vh;
+        padding-top: 10vh;
+    }
+    #home .titulo {
+        font-size: 10vh;
+    }
+    #home .contador-navidad {
+        font-size: 6vh;
+    }
 }

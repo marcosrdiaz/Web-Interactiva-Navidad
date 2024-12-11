@@ -13,7 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
         items[index].classList.add("active");
         const src = items[index].getAttribute("data-src");
         audio.src = src;
-        audio.play();
+        // Reproducir solo si el usuario ha interactuado con la página
+        if (audio.paused) {
+            audio.play().catch(error => {
+                console.log("El usuario necesita interactuar con la página primero.");
+            });
+        }
     };
 
     // Evento de clic en elementos de la lista
