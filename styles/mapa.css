@@ -7,3 +7,9 @@
     border-radius: 10px;
     z-index: 0;
 }
+@media only screen and (min-width: 769px) {
+    #map {
+        margin-top: 0;
+        height: 70vh;
+    }
+}
