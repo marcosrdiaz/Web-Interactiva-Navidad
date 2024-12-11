@@ -6,7 +6,7 @@ header {
     background-color: #73BA9B;
     height: 15vh; /* 15% del alto de la pantalla */
     max-width: 600px; /* Tamaño móvil */
-    width: 100%;
+    width: 100vw;
     box-sizing: border-box; /* Incluye el padding en el ancho total */
     padding: 0 10px; 
     margin-left: 0px;
