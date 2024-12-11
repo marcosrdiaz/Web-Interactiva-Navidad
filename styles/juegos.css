@@ -34,8 +34,8 @@
 }
 
 .game img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100vw;
+    height: 30vh;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 2vh;
@@ -145,8 +145,8 @@
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
-    background-color: #F2545B;
-    color: white;
+    background-color: #1387d4;
+    color: black;
     border: none;
     border-radius: 5px;
 }
@@ -277,10 +277,21 @@
 
     .game-container {
         flex-direction: row;
+        position: relative;
     }
     
     .game {
         width: 30vw; 
+    }
+
+    .game:first-child {
+        top: 0;
+        left: 0;
+    }
+    
+    .game:last-child {
+        top: 50vh; /* Ajusta según sea necesario */
+        left: 50vw; /* Ajusta según sea necesario */
     }
     
     .game img {
@@ -303,7 +314,6 @@
     }
 
     #juego1 {
-        background-image: url("/styles/images/fondoMT.png");
         width: 100vw;
         height: 100vh;
     }
