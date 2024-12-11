@@ -77,6 +77,7 @@ a {
 @media only screen and (min-width: 601px) and (max-width: 768px) {
     main{
         max-width: 768px;
+        overflow-x: hidden;
     }
     #home{
         padding-top: 11vh;
@@ -107,5 +108,12 @@ a {
     }
     #Juega{
         padding-top: 11vh;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    main{
+        max-width: none;
+        overflow-x: hidden;
     }
 }
