@@ -231,7 +231,7 @@ function declareWinner(playerPos, sled2Pos, sled3Pos) {
     } else if (sled3Pos >= 600 && sled3Pos > playerPos && sled3Pos > sled2Pos) {
         winner = 'Trineo 3';
     }
-    alert(`¡${winner} ha ganado la carrera!`);
+    showAlert(`¡${winner} ha ganado la carrera!`);
     raceCanvas.style.display = 'none';
     playerSled.style.display = 'none';
     flecha.style.display = 'none';
