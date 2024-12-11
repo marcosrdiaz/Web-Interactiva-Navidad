@@ -67,10 +67,17 @@ btnRegister.onclick = function() {
 }
 
 closeLogin.onclick = function() {
+    document.getElementById('loginUsername').value = '';
+    document.getElementById('loginPassword').value = '';
     loginModal.style.display = "none";
 }
 
 closeRegister.onclick = function() {
+    document.getElementById('regUsername').value = '';
+    document.getElementById('regEmail').value = '';
+    document.getElementById('regPass1').value = '';
+    document.getElementById('regPass2').value = '';
+    document.getElementById('regGenero').value = '';
     registerModal.style.display = "none";
 }
 
