@@ -333,17 +333,18 @@
     }
     
     #pantallaVictoria {
-        width: 100vw;
-        height: 100vh;
-        transform: rotate(270deg);
+        width: 100vw; /* Ocupa todo el ancho de la pantalla */
+        height: 100vh; /* Ocupa todo el alto de la pantalla */
+        background-image: url("/styles/images/grinch-muerto-horizontal.jpg");
     }
     
     #pantallaVictoria h1 {
-        font-size: 4rem;
-        left: 74vh;  
-        bottom: 45vh;
+        font-size: 3rem;
+        left: 50%;
+        top: 10%;
+        transform: translate(-50%, -50%); /* Centra el texto */
     }
-    
+
     .close-btn {
         bottom: 87vh;
         right: 3vw;
