@@ -321,13 +321,10 @@
             <div id="juego1" class="juego-oculto" style="display: none;">
                 <h1>Puntos: <span id="score">0</span></h1> 
                 <img src="/styles/images/pipa.png" alt="Pistola" id="pistola">
-                <img src="/styles/images/target-horizontal.png" alt="Objetivo" id="target">
-                
-                <img src="/styles/images/fondoMT-horizontal.png" alt="fondoMT-horizontal" id="fondo-hor">
+                <img src="/styles/images/target.png" alt="Objetivo" id="target">
                 
                 <button class="close-btn" onclick="cerrarJuego1()">X</button>
                 <div id="pantallaVictoria">
-                    
                     <h1>¡HAS DERROTADO AL GRINCH!</h1>
                 </div>
             </div>
@@ -336,12 +333,14 @@
                 <button class="close-btn" onclick="cerrarJuego2()">X</button>
                 <div class="game-container">
                     <div id="startScreen">
-                        <p>Haz click en la pantalla para avanzar con tu trineo.</p>
+                        <p>Haz click en la pantalla o pulsa el espacio para avanzar con tu trineo.</p>
                         <button id="startRaceButton">Iniciar Carrera</button>
                     </div>
-                    <div id="countdown" style="display: none; font-size: 2rem; text-align: center;"></div>
                     <canvas id="raceCanvas" width="600" height=auto style="display: none;"></canvas>
-                    <img id="playerSled" src="/styles/images/trineo-png-horizontal.png" alt="Trineo 1">
+                    <div id="jugador">
+                        <img id="flecha" src="/styles/images/flecha.png" alt="Flecha">
+                        <img id="playerSled" src="/styles/images/trineo-png-horizontal.png" alt="Trineo 1">
+                    </div>
                     <img id="sled2" src="/styles/images/trineo-png-horizontal.png" alt="Trineo 2">
                     <img id="sled3" src="/styles/images/trineo-png-horizontal.png" alt="Trineo 3">
                 </div>
