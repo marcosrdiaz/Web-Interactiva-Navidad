@@ -52,7 +52,8 @@ const locations = [
     { name: "Oslo, Noruega", coords: [59.9139, 10.7522] },
     { name: "Madrid, España", coords: [40.4168, -3.7038] },
     { name: "Roma, Italia", coords: [41.9028, 12.4964] },
-    { name: "Honolulu, Hawái", coords: [21.3069, -157.8583] }
+    { name: "Honolulu, Hawái", coords: [21.3069, -157.8583] },
+    { name: "Madrid, España", coords:[40.416775, -3.703790] }
 ];
 
 
