@@ -287,18 +287,6 @@
         width: 30vw; 
         margin-bottom: none; 
     }
-
-    .game:first-child {
-        position: relative;
-        top: 0;
-        left: 0;
-    }
-    
-    .game:last-child {
-        position: relative;
-        top: 8vh; /* Ajusta según sea necesario */
-        left: 0vw; /* Ajusta según sea necesario */
-    }
     
     .game img {
         max-width: 90%;
