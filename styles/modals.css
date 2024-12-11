@@ -120,7 +120,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
     position: fixed;
     border-radius: 8px;
     top: 16vh;
-    right: 1vw;
+    right: 1%;
     background: rgba(115, 186, 155, 0.9);
     padding: 10px;
     z-index: 9;
