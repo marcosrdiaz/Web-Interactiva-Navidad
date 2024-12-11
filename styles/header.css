@@ -6,7 +6,7 @@ header {
     background-color: #73BA9B;
     height: 15vh; /* 15% del alto de la pantalla */
     max-width: 600px; /* Tamaño móvil */
-    width: 100%;
+    width: 100vw;
     box-sizing: border-box; /* Incluye el padding en el ancho total */
     padding: 0 10px; 
     margin-left: 0px;
@@ -45,11 +45,28 @@ header {
     border-radius: 10px;
     text-align: center;
 }
-#perfilIcon {
-    height: 50px;
-    width: auto;
-}
+
 .hidden {
     /* Para ocultar los botones de login y register */
     display: none;
 } 
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    header {
+        height: 10vh;
+        max-width: 768px;
+    }
+    .icon {
+        height: 65px;
+    }
+    #perfilIcon {
+        height: 40px;
+    }
+    #Menu-desplegable{
+        top: 11vh;
+        
+    }
+    #Menu-desplegable a{
+        font-size: 1.5em;
+    }
+}
