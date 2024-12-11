@@ -300,6 +300,7 @@
     
     .game {
         width: 30vw; 
+        margin-bottom: none; 
     }
     
     .game img {
