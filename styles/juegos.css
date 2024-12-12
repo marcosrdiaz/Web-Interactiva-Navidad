@@ -1,14 +1,19 @@
 
 .game-container {
+    width: 90vw;
     height: 80vh;
     display: flex;
     flex-direction: column;
     scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+    overflow-y:scroll;
+    background-color: rgba(65, 78, 94, 0.832);
+    place-self: center;
+    border-radius: 50px;
+
 }
 
 .game {
-    width: 70%; 
+    width: 60%; 
     height: auto;
     display: flex;
     flex-direction: column;
@@ -17,12 +22,11 @@
     scroll-snap-align: start;
     background-color: #e04747;
     border-bottom: 1px solid #ccc;
-    padding: 15px;
     text-align: center;
     margin: auto; 
     border-radius: 50px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    margin-bottom: 2vh; 
+    padding: 2vh;
 }
 
 .game:nth-child(odd) {
