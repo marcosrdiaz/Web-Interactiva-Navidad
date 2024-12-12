@@ -34,7 +34,7 @@ h1{
 
 .grupo-input input {
     margin-top: 3px;
-    padding: 5px, 1vw;
+    padding: 5px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -43,7 +43,7 @@ h1{
     transition: border-color 0.3s;
 }
 .grupo-input textarea {
-    padding: 5px, 1vw;
+    padding: 5px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;

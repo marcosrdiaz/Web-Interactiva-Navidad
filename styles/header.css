@@ -64,7 +64,7 @@ footer{
     top: 95vh; 
     width: 100vw;
     height: auto; 
-    background-color: none;
+    background-color: transparent;
 }
 footer p{
     background-color: brown; 
