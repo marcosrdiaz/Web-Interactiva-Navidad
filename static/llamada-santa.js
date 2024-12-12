@@ -34,7 +34,7 @@ callButton.addEventListener('click', () => {
   // Generar un número aleatorio entre 1 y 100
   const randomChance = Math.floor(Math.random() * 100) + 1;
 
-  if (randomChance <= 10) { // 10% de probabilidad
+  if (randomChance <= 20) { // 20% de probabilidad
     message.textContent = '¡Santa ha respondido la llamada!';
     santaVideo.src = getRandomVideo(); // Asignar video aleatorio
     santaVideo.hidden = false;
