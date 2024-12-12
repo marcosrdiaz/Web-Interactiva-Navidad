@@ -57,7 +57,7 @@
     margin: 10px auto;
 }
 .detalle-receta button {
-    background-color: #e74c3c;
+    background-color: #d32f2f;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -67,7 +67,7 @@
     margin-top: 10px;
 }
 .detalle-receta button:hover {
-    background-color: #c0392b;
+    background-color: #9c2f22;
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {

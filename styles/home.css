@@ -5,7 +5,7 @@
     align-items: center; /* Centra horizontal */
     width: 100vw;
     font-size: 5vh;
-    color: rgb(244, 244, 244);
+    color: white;
     font-family: "Updock", cursive;
     font-weight: 200;
     font-style: normal;
@@ -20,6 +20,7 @@
     display: flex;
     align-items: center;
     font-size: 4vh;
+    background-color: rgba(0, 0, 0, 0.002); /* evitar contraste WAVE */
 }
 
 #home .titulo {
