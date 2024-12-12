@@ -79,11 +79,11 @@
 /* Juego 1 */
 
 #juego1 {
-    background-image: url("/styles/images/fondoMT-horizontal.png");
+    background-image: url("/images/fondoMT-horizontal.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    cursor: url("/styles/images/mira.png") 25 25, not-allowed;
+    cursor: url("/images/mira.png") 25 25, not-allowed;
 }
 
 #target {
@@ -126,7 +126,7 @@
     display: flex;
     align-items: center;
     font-size: 3rem;
-    background-image: url("/styles/images/grinch-muerto.jpg");
+    background-image: url("/images/grinch-muerto.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -197,7 +197,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-image: url("/styles/images/nieve-horizontal.png");
+    background-image: url("/images/nieve-horizontal.png");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -243,7 +243,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-image: url("/styles/images/nieve-horizontal.png");
+    background-image: url("/images/nieve-horizontal.png");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -329,7 +329,7 @@
     #juego1 {
         width: 100vw;
         height: 100vh;
-        background-image: url("/styles/images/fondoMT.png");
+        background-image: url("/images/fondoMT.png");
     }
 
     /* Juego 1 */
@@ -359,7 +359,7 @@
     #pantallaVictoria {
         width: 100vw; /* Ocupa todo el ancho de la pantalla */
         height: 100vh; /* Ocupa todo el alto de la pantalla */
-        background-image: url("/styles/images/grinch-muerto-horizontal.jpg");
+        background-image: url("/images/grinch-muerto-horizontal.jpg");
     }
     
     #pantallaVictoria h1 {
@@ -391,7 +391,7 @@
     #startScreen {
         width: 100vw;
         height: 100vh;
-        background-image: url("/styles/images/nieve.png");
+        background-image: url("/images/nieve.png");
     }
     
     #startScreen p {
@@ -415,6 +415,6 @@
     #raceCanvas {
         width: 100vw;
         height: 100vh;
-        background-image: url("/styles/images/nieve.png"); 
+        background-image: url("/images/nieve.png"); 
     }
 }    

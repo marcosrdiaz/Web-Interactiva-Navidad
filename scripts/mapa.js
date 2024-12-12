@@ -12,7 +12,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 
 // Marcador de Papá Noel
 const santaIcon = L.icon({
-    iconUrl: '/styles/images/santa_icon_map.png', // Imagen del trineo
+    iconUrl: '/images/santa_icon_map.png', // Imagen del trineo
     iconSize: [50, 50],
     iconAnchor: [25, 50],
 });
