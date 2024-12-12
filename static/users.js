@@ -108,9 +108,8 @@ document.getElementById('registerForm').addEventListener('submit', function (eve
     const pass2 = document.getElementById('regPass2').value;
     const genero = document.getElementById('regGenero').value;
 
-
     if (!username || username.length < 3) return showAlert('Nombre de usuario demasiado corto');
-    if (passwordNotEnough(password)) return showAlert('Contraseña insuficiente');
+    if (passwordNotEnough(pass1)) return showAlert('Contraseña insuficiente, asegura implementar al menos 12 carácteres, incluye al menos 1 mayúscula, 1 número, 1 minúscula, y 1 carácter especial');
     if (pass1 !== pass2) return showAlert('Las contraseñas no coinciden');
 
     let users = localStorage.getItem("usersSanta");
@@ -119,7 +118,8 @@ document.getElementById('registerForm').addEventListener('submit', function (eve
     } else {
         users = [];
     }
-    if (users[username]) {
+    let AlreadyExists = users.find(user => user.username === username);
+    if (AlreadyExists) {
         showAlert('Este nombre de usuario ya está registrado.');
         return;
     }
@@ -140,10 +140,10 @@ document.getElementById('registerForm').addEventListener('submit', function (eve
 
 // Validación de contraseña
 function passwordNotEnough(pass) {
-    if (pass.length !== 12) return true;
+    if (pass.length < 12) return true;
     if (!/[A-Z]/.test(pass)) return true;
     if (!/[a-z]/.test(pass)) return true;
-    if (!/\d.\d/.test(pass)) return true;
+    if (!/\d/.test(pass)) return true;
     if (!/[!@#$%^&(),.?":{}|<>]/.test(pass)) return true;
     return false;
 }
