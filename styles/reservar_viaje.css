@@ -4,12 +4,10 @@
   flex-direction: column;
   gap: 2vh;
   width: 90vw;
-  max-height: 80vh;
-  min-height: 50vh;
   border-radius: 10px;
   place-self: center;
-  margin-top: 7vh;
-
+  margin-top: 2vh;
+}
 
 .form-section {
   display: flex;
@@ -111,5 +109,4 @@
     padding: 10px 30px;
   }
 
-}
 }

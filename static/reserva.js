@@ -1,5 +1,4 @@
 document.getElementsByClassName('form-section')[0].addEventListener('submit', function (event) {
-    alert('im inn');
     event.preventDefault();
     let realUser = sessionStorage.getItem('loggedInUser');
     if (!realUser){
@@ -12,8 +11,10 @@ document.getElementsByClassName('form-section')[0].addEventListener('submit', fu
     const inputUsername = document.getElementById('name').value;
     const paquete = document.getElementById('package').value;
     const personas = document.getElementById('people').value;
-
-// COMPROBAR LA FECHA
+    if (!esFechaPosterior(fecha)) {
+        showAlert('Introduce una fecha válida');
+        return;
+    }
 
     let users = localStorage.getItem("usersSanta");
     if (users) {
@@ -44,9 +45,10 @@ document.getElementsByClassName('form-section')[0].addEventListener('submit', fu
     localStorage.setItem("usersSanta", JSON.stringify(users));
     sessionStorage.setItem("loggedInUser", JSON.stringify(realUser));
 
-    showAlert('Carta registrada exitosamente');
+    showAlert('Reserva registrada exitosamente');
     // Vaciar los campos del formulario 
     borrarReserva();
+    return;
 });
 
 function borrarReserva() {
@@ -55,6 +57,15 @@ function borrarReserva() {
     document.getElementById('name').value = '';
     document.getElementById('package').value = '';
     document.getElementById('people').value = '';
+}
+
+// Función para comprobar si la fecha es posterior a hoy
+function esFechaPosterior(fecha) {
+    const hoy = new Date();
+    const fechaObj = new Date(fecha);
+    // Ignorar la hora y comparar solo la fecha
+    hoy.setHours(0, 0, 0, 0);
+    return fechaObj > hoy;
 }
 
 function mostrarDisplayReservas() {
