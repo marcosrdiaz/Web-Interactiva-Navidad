@@ -128,7 +128,8 @@ document.getElementById('registerForm').addEventListener('submit', function (eve
         mail: mail,
         password: pass1,
         genero: genero,
-        cartas:[]
+        cartas:[],
+        reservas:[]
     };
     users.push(newUser);
     localStorage.setItem("usersSanta",JSON.stringify(users));
