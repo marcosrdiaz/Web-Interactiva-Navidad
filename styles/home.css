@@ -11,7 +11,7 @@
     font-style: normal;
     text-align: center; /* Centra texto en los hijos */
     padding-top: 15vh;
-    background: url('/styles/images/fondoMT.png') no-repeat;
+    background: url('/images/fondoMT.png') no-repeat;
     background-size: cover;
 }
 

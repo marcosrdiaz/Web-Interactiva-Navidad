@@ -187,8 +187,8 @@ function iniciarSesion(usuario, gen) {
     // Crear un botón de perfil usando una imagen en lugar de texto
     const navbar = document.getElementById('navSesion');
     const perfilButton = document.createElement('img');
-    if (gen == "hombre") { perfilButton.src = '/styles/images/perfilM.png' } // Ruta a la imagen del perfil elfo
-    else { perfilButton.src = 'styles/images/perfilF.png' };
+    if (gen == "hombre") { perfilButton.src = '/images/perfilM.png' } // Ruta a la imagen del perfil elfo
+    else { perfilButton.src = '/images/perfilF.png' };
     perfilButton.alt = 'Perfil';
     perfilButton.style.cursor = 'pointer'; // Cambiar el cursor al pasar por encima
 

@@ -7,7 +7,7 @@ function mostrarReceta(idReceta) {
         recetaDiv.innerHTML = `
             <h2>Sabrosas Tortitas</h2>
             <p>Resultado Final:</p>
-            <img src="/styles/images/pankakes.png" alt="Pancakes">
+            <img src="/images/pankakes.png" alt="Pancakes">
             <hr>
             <h3>Ingredientes:</h3>
             <ul>
@@ -37,7 +37,7 @@ function mostrarReceta(idReceta) {
         recetaDiv.innerHTML = `
             <h2>Bastón de Caramelo</h2>
             <p>Resultado Final:</p>
-            <img src="/styles/images/baston_caramelo.png" alt="Bastón de caramelo">
+            <img src="/images/baston_caramelo.png" alt="Bastón de caramelo">
             <hr>
             <h3>Ingredientes:</h3>
             <ul>
@@ -63,7 +63,7 @@ function mostrarReceta(idReceta) {
         recetaDiv.innerHTML = `
             <h2>Galletas Navideñas</h2>
             <p>Resultado Final:</p>
-            <img src="/styles/images/galletas.jpg" alt="Galletas">
+            <img src="/images/galletas.jpg" alt="Galletas">
             <hr>
             <h3>Ingredientes:</h3>
             <ul>
@@ -92,7 +92,7 @@ function mostrarReceta(idReceta) {
         recetaDiv.innerHTML = `
             <h2>Chocolate Caliente</h2>
             <p>Resultado Final:</p>
-            <img src="/styles/images/chocolate.png" alt="Chocolate Caliente">
+            <img src="/images/chocolate.png" alt="Chocolate Caliente">
             <hr>
             <h3>Ingredientes:</h3>
             <ul>
