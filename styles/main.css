@@ -22,6 +22,34 @@ a {
     text-decoration: none; 
 }
 
+.btnrojo {
+    background: linear-gradient(135deg, #ff0000, #850404);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btnrojo:hover {
+    background-color: #c82333;
+}
+
+.btnverde {
+    background: linear-gradient(135deg, #3ff132, #088504);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btnverde:hover {
+    background-color: #62c823;
+}
+
 #home{
     height: 100vh;
     width: 100vw;

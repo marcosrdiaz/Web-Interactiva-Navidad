@@ -112,7 +112,7 @@ function mostrarDisplayReservas() {
 
     const closeButton = document.createElement('button');
     closeButton.innerText = 'Cerrar';
-    closeButton.classList.add('close-button');
+    closeButton.classList.add('btnrojo');
     closeButton.onclick = () => {
         document.body.removeChild(displayContainer);
     };

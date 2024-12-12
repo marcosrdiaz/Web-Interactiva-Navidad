@@ -63,19 +63,6 @@
   background-color: #218838;
 }
 
-#cancel {
-  background: linear-gradient(135deg, #ff0000, #850404);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-#cancel:hover {
-  background-color: #c82333;
-}
 
 /* Estilos para tablet (hasta 600px) */
 @media (min-width: 601px) and (max-width: 768px) {

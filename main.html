@@ -59,7 +59,7 @@
         <div id="alertModal" class="modal">
             <div class="modal-content">
                 <h2 id="alertMessage">Este es un mensaje de alerta</h2>
-                <button id="closeAlertBtn" class="btn-submit">Cerrar</button>
+                <button id="closeAlertBtn" class="btnrojo">Cerrar</button>
             </div>
         </div>
         <!-- Contenedor del menú de perfil -->
@@ -91,8 +91,8 @@
                         <option value="no_definido">Prefiero no decirlo</option>
                     </select>
                     <div style="display: flex; flex-direction: row; gap: 1vw;"> 
-                        <button type="submit" class="btn-submit">Registrarse</button>
-                        <button class="btn" id="closeRegister">Cancelar</span>
+                        <button type="submit" class="btnverde">Registrarse</button>
+                        <button class="btnrojo" id="closeRegister">Cancelar</span>
                     </div>
                 </form>
             </div>
@@ -107,8 +107,8 @@
                     <label for="loginPassword">Contraseña:</label>
                     <input type="password" id="loginPassword" name="password" required placeholder="Introduce tu contraseña">
                     <div style="display: flex; flex-direction: row; gap: 1vw;"> 
-                        <button type="submit" class="btn-submit">Iniciar Sesión</button>
-                        <button class="btn" id="closeLogin">Cancelar</span>
+                        <button type="submit" class="btnverde">Iniciar Sesión</button>
+                        <button class="btnrojo" id="closeLogin">Cancelar</span>
                     </div>
                 </form>
             </div>
@@ -162,7 +162,7 @@
                     <label for="letterCarta">Carta</label>
                     <textarea id="letterCarta" name="letter" maxlength="600" required></textarea>
                 </div>
-                <button type="submit" class="submit-btn">Enviar Carta</button>
+                <button type="submit" class="btnrojo" style="width: 40vw; place-self: center; margin-bottom: 1vh;">Enviar Carta</button>
             </form>
         </section>
         <section class="seccion5" id="LLamaSanta">
@@ -210,8 +210,8 @@
                     <input type="number" id="people" name="people" min="1" max="10">
                   </div>
                   <div class="button-group">
-                    <button type="submit" id="confirm">Confirmar</button>
-                    <button id="cancel" onclick="borrarReserva()">Cancelar</button>
+                    <button class='btnverde' type="submit">Confirmar</button>
+                    <button class="btnrojo" onclick="borrarReserva()">Cancelar</button>
                   </div>
                 </form>
             </div>

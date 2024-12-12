@@ -118,9 +118,9 @@ h1{
     gap: 10px;
 }
 
-.nav-button, .close-button {
+.nav-button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #73BA9B;
     border: none;
     border-radius: 5px;
     color: white;
@@ -128,8 +128,8 @@ h1{
     font-size: 16px;
 }
 
-.nav-button:hover, .close-button:hover {
-    background-color: #0056b3;
+.nav-button:hover {
+    background-color: #2f624c;
 }
 
 /* Vista para pantallas >= 769px */
