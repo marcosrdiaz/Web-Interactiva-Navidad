@@ -87,7 +87,7 @@ function getRandomInt(min, max) {
 target.addEventListener('click', () => {
     score += 5;
     moverObjetivo();
-    if (score >= 1000) {
+    if (score >= 100) {
         mostrarVictoria();
     }
 });
