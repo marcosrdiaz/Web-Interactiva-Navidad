@@ -59,27 +59,6 @@ header {
 .hidden {
     display: none;
 } 
-footer{
-    position: fixed; 
-    top: 95vh; 
-    width: 100vw;
-    height: auto; 
-    background-color: transparent;
-}
-footer p{
-    background-color: brown; 
-    color: white; 
-    padding: 1vh;
-    visibility: hidden; /* Oculta el elemento */
-    opacity: 0; /* Hace que el elemento sea completamente transparente */
-    pointer-events: none; /* Desactiva eventos del mouse */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Añade una transición suave */
-}
-footer:hover p {
-    visibility: visible; /* Muestra el contenido */
-    opacity: 1; /* Hace que el contenido sea opaco */
-    pointer-events: auto; /* Reactiva interacciones */
-}
 
 @media only screen and (min-width: 601px) and (max-width: 928px) {
     header {
