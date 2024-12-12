@@ -1,7 +1,8 @@
 
 .game-container {
     width: 90vw;
-    height: 80vh;
+    height: auto;
+    gap: 1vh;
     display: flex;
     flex-direction: column;
     scroll-snap-type: y mandatory;

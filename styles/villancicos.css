@@ -30,6 +30,7 @@ h1 {
 /* Playlist */
 ul#playlist {
     overflow-y: auto;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     border: 1px solid #ddd;
