@@ -304,7 +304,7 @@
     
     .game {
         width: 30vw; 
-        margin-bottom: none; 
+        margin-bottom: 0; 
     }
     
     .game img {

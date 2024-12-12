@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,7 +93,7 @@
                     </select>
                     <div style="display: flex; flex-direction: row; gap: 1vw;"> 
                         <button type="submit" class="btnverde">Registrarse</button>
-                        <button class="btnrojo" id="closeRegister">Cancelar</span>
+                        <button class="btnrojo" id="closeRegister">Cancelar</button>
                     </div>
                 </form>
             </div>
@@ -108,7 +109,7 @@
                     <input type="password" id="loginPassword" name="password" required placeholder="Introduce tu contraseña">
                     <div style="display: flex; flex-direction: row; gap: 1vw;"> 
                         <button type="submit" class="btnverde">Iniciar Sesión</button>
-                        <button class="btnrojo" id="closeLogin">Cancelar</span>
+                        <button class="btnrojo" id="closeLogin">Cancelar</button>
                     </div>
                 </form>
             </div>
@@ -119,12 +120,12 @@
             <div class="contador-navidad">XXD XXH XXS</div>
         </section>
         <section class="seccion2" id="SobreSanta">
-            <section class="arriba">
+            <div class="arriba">
                 <h2 class="titulo2">Sobre Papá Noel</h2>
                 <img src="/images/renos.png" alt="santa" class="imagen">
-            </section>
-            <section class="abajo">
-                <h4 class="cuadrado">Papá Noel, conocido también como Santa Claus 
+            </div>
+            <div class="abajo">
+                <h3 class="cuadrado">Papá Noel, conocido también como Santa Claus 
                     (en neerlandés: Sinterklaas), Viejito Pascuero, Colacho, San Nicolás
                     o simplemente Santa, es un personaje legendario originario del
                     cristianismo occidental, conocido por repartir regalos a niños
@@ -140,8 +141,8 @@
                     versión legendaria húngara, Mikulás) por parte del folclore europeo,
                     la personificación de la Navidad según el folclore inglés de Papá 
                     Noel, y la figura neerlandesa de Sinterklaas.
-                </h4>
-            </section>
+                </h3>
+            </div>
         </section>
         <section id="Mapa">
             <h1>¡Encuentra a Papá Noel!</h1>
@@ -220,19 +221,19 @@
             <h1>Nuestras Recetas</h1>
             <div class="menu-recetas">
                 <div class="receta" onclick="mostrarReceta('tortitas')">
-                    <p>Sabrosas tortitas</p>
+                    <h2>Sabrosas tortitas</h2>
                     <img src="/images/pankakes.png" alt="Pankakes">
                 </div>
                 <div class="receta" onclick="mostrarReceta('caramelo')">
-                    <p>Bastón de caramelo</p>
+                    <h2>Bastón de caramelo</h2>
                     <img src="/images/baston_caramelo.png" alt="Bastón de Caramelo">
                 </div>
                 <div class="receta" onclick="mostrarReceta('galletas')">
-                    <p>Galletas</p>
+                    <h2>Galletas</h2>
                     <img src="/images/galletas.jpg" alt="Galletas">
                 </div>
                 <div class="receta" onclick="mostrarReceta('chocolate')">
-                    <p>Chocolate caliente</p>
+                    <h2>Chocolate caliente</h2>
                     <img src="/images/chocolate.png" alt="Chocolate">
                 </div>
             </div>
@@ -305,8 +306,8 @@
                     Tu navegador no soporta el reproductor de audio.
                 </audio>
                 <div class="controls">
-                    <button id="prev">⏮</button>
-                    <button id="next">⏭</button>
+                    <button id="prev">Prev</button>
+                    <button id="next">Next</button>
                 </div>
             </div>
         </section>
@@ -345,7 +346,7 @@
                         <p>Haz click en la pantalla o pulsa el espacio para avanzar con tu trineo. Consejo para hacerlo mas rapido: mantener espacio :)</p>
                         <button id="startRaceButton">Iniciar Carrera</button>
                     </div>
-                    <canvas id="raceCanvas" width="600" height=auto style="display: none;"></canvas>
+                    <canvas id="raceCanvas" width="600" style="display: none;"></canvas>
                     <div id="jugador">+
                         <img id="flecha" src="/images/flecha.png" alt="Flecha">
                         <img id="playerSled" src="/images/trineo-png-horizontal.png" alt="Trineo 1">
