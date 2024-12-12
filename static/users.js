@@ -110,7 +110,7 @@ document.getElementById('registerForm').addEventListener('submit', function (eve
 
 
     if (!username || username.length < 3) return showAlert('Nombre de usuario demasiado corto');
-    //if (passwordNotEnough(password)) return showAlert('Contraseña insuficiente');
+    if (passwordNotEnough(password)) return showAlert('Contraseña insuficiente');
     if (pass1 !== pass2) return showAlert('Las contraseñas no coinciden');
 
     let users = localStorage.getItem("usersSanta");
