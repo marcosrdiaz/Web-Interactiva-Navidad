@@ -144,4 +144,7 @@ a {
         max-width: none;
         overflow-x: hidden;
     }
+    #Juega{
+        padding-top: 5vh;
+    }
 }
