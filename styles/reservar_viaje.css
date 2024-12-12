@@ -1,11 +1,14 @@
 .reservation-container {
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  padding: 25px 40px;
-  width: 450px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  width: 90vw;
+  max-height: 80vh;
+  min-height: 50vh;
+  border-radius: 10px;
+  place-self: center;
+
 
 .form-section {
   display: flex;
@@ -15,19 +18,25 @@
 .form-group {
   margin-bottom: 15px;
   text-align: left;
-}
+  place-self: center;
 
-input, select {
-  width: 100%;
+}
+.form-group label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.form-section input, .form-section select {
+  width:75vw ;
   padding: 10px;
-  margin-top: 5px;
+  margin: 5px;
   border: 1px solid #ccc;
   border-radius: 10px;
   font-size: 14px;
   box-shadow: inset 0 2px 5px rgba(224, 15, 43, 0.281);
 }
 
-input:focus, select:focus {
+.form-section input:focus, .form-section select:focus {
   outline: none;
   border: 1px solid #7FB3D5;
   box-shadow: 0 0 8px rgba(127, 179, 213, 0.6);
@@ -35,9 +44,8 @@ input:focus, select:focus {
 
 .button-group {
   display: flex;
-  text-align: center;
-  margin-top: 0.5em;
-  margin-left: 6em;
+  place-self: center;
+  margin-bottom: 10px;
   gap: 2em;
 }
 
@@ -68,4 +76,39 @@ input:focus, select:focus {
 
 #cancel:hover {
   background-color: #c82333;
+}
+
+/* Estilos para tablet (hasta 600px) */
+@media (min-width: 601px) and (max-width: 768px) {
+  .form-section input, .form-section select {
+    width: 60vw;
+    margin: 5px;
+  }
+  
+  .button-group {
+    gap: 3em;
+  }
+
+  #confirm, #cancel {
+    padding: 10px 20px;
+  }
+
+}
+/* Estilos para ordenador (más de 768px) */
+@media (min-width: 769px) {
+
+  .form-section input, .form-section select {
+    width: 50vw;
+    margin: 5px;
+  }
+
+  .button-group {
+    gap: 4em;
+  }
+
+  #confirm, #cancel {
+    padding: 10px 30px;
+  }
+
+}
 }

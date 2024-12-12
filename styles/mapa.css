@@ -7,6 +7,17 @@
     border-radius: 10px;
     z-index: 0;
 }
+
+/* Estilos para tablet (601px a 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+    #map {
+        margin-top: 0;
+        height: 70vh;
+    }
+}
+
+
+/* Estilos para ordenador (más de 768px) */
 @media only screen and (min-width: 769px) {
     #map {
         margin-top: 0;

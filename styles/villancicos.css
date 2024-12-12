@@ -18,16 +18,17 @@ h1 {
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    display: inline-block;
-    max-width: 400px;
-    width: 90%;
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    max-height: 80vh;
+    min-height: 50vh;
+    place-self: center;
+  
 }
 
 /* Playlist */
 ul#playlist {
-    max-height: 50vh;
     overflow-y: auto;
     margin: 0;
     padding: 0;
@@ -79,6 +80,7 @@ audio {
     display: flex;
     justify-content: space-between;
 }
+
 .controls button {
     background: linear-gradient(135deg, #FF7043, #D84315);
     border: none;
@@ -99,7 +101,6 @@ audio {
 .controls button:active {
     transform: scale(1);
 }
-
 /* Animación de ícono */
 @keyframes bounce {
     0%, 100% {
@@ -107,5 +108,49 @@ audio {
     }
     50% {
         transform: translateY(-5px);
+    }
+}
+
+
+/* Estilos para tablet (601px a 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+
+    ul#playlist li {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    audio {
+        margin-top: 10px;
+    }
+
+    .controls button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilos para ordenador (más de 768px) */
+@media (min-width: 769px) {
+    #villancicos {
+        padding: 20px;
+    }
+
+    .player {
+        padding: 20px;
+    }
+
+    ul#playlist li {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+
+    audio {
+        margin-top: 20px;
+    }
+
+    .controls button {
+        padding: 10px 20px;
+        font-size: 1rem;
     }
 }
