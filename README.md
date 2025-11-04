@@ -1,8 +1,11 @@
 # Web Interactiva "Santa Tracker"
+
 ***Breve descripción***
+
 Sitio web interactivo navideño que incluye registro, juegos, cartas a Papá Noel, reserva de viajes, visualización de mapa con ruta en tiempo real y reproducción de villancicos.
 
 ***Qué hace el proyecto***
+
 Ofrece entretenimiento y herramientas para la temporada navideña: escribir cartas, reservar viajes, ver ubicación de Papá Noel en un mapa con Leaflet, escuchar villancicos y jugar juegos temáticos.
 
 ***Tecnologías usadas***
